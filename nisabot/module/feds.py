@@ -33,7 +33,7 @@ from telegram.error import BadRequest, TelegramError, Unauthorized
 from telegram.ext import CallbackQueryHandler, CommandHandler
 from telegram.utils.helpers import mention_html, mention_markdown
 
-import nisabot.module.sql.feds_sql as sql
+import nisabot.module.sql import feds_db
 from nisabot import (
     DEV_USERS,
     LOGGER,
