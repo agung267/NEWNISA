@@ -1,5 +1,5 @@
-# UserindoBot
-# Copyright (C) 2020  UserindoBot Team, <https://github.com/userbotindo/UserIndoBot.git>
+# Nisabot
+# Copyright (C) 2021 I Do Not Know, <https://github.com/agung267/NEWNISA.git>
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -22,10 +22,10 @@ from pytz import country_names as cname
 from telegram import ParseMode
 from telegram.error import BadRequest
 
-from ubotindo import API_WEATHER as APPID
-from ubotindo import dispatcher
-from ubotindo.modules.disable import DisableAbleCommandHandler
-from ubotindo.modules.helper_funcs.alternate import typing_action
+from nisabot import API_WEATHER as APPID
+from nisabot import dispatcher
+from nisabot.modules.disable import DisableAbleCommandHandler
+from nisabot.modules.helper_funcs.alternate import typing_action
 
 
 @typing_action
