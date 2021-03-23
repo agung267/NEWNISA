@@ -20,8 +20,8 @@ from typing import Union
 
 from sqlalchemy import Column, String, Boolean, UnicodeText, Integer, func, distinct
 
-from nisabot.modules.helper_funcs.msg_types import Types
-from nisabot.modules.sql import SESSION, BASE
+from nisabot.module.helper_funcs.msg_types import Types
+from nisabot.module.sql import SESSION, BASE
 
 
 class ChatAccessConnectionSettings(BASE):
