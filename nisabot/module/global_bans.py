@@ -23,7 +23,7 @@ from telegram.error import BadRequest, TelegramError, Unauthorized, TimedOut
 from telegram.ext import CommandHandler, Filters, MessageHandler
 from telegram.utils.helpers import mention_html
 
-import nisabot.modules.no_sql.gban_db as gban_db
+import nisabot.module.no_sql.gban_db as gban_db
 from nisabot import STRICT_GBAN  # LOGGER,
 from nisabot import (
     DEV_USERS,
@@ -34,18 +34,18 @@ from nisabot import (
     dispatcher,
     spamwtc,
 )
-from nisabot.modules.helper_funcs.alternate import (
+from nisabot.module.helper_funcs.alternate import (
     send_action,
     send_message,
     typing_action,
 )
-from nisabot.modules.helper_funcs.chat_status import is_user_admin, user_admin
-from nisabot.modules.helper_funcs.extraction import (
+from nisabot.module.helper_funcs.chat_status import is_user_admin, user_admin
+from nisabot.module.helper_funcs.extraction import (
     extract_user,
     extract_user_and_text,
 )
-from nisabot.modules.helper_funcs.filters import CustomFilters
-from nisabot.modules.no_sql.users_db import get_all_chats
+from nisabot.module.helper_funcs.filters import CustomFilters
+from nisabot.module.no_sql.users_db import get_all_chats
 
 GBAN_ENFORCE_GROUP = 6
 
