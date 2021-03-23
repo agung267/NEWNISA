@@ -22,11 +22,7 @@
         "description": "Your telegram username",
         "value": "fake762"
       },
-      "DATABASE_URL": {
-        "description": "Your database",
-        "value": "sqldbtype://username:pw@hostname:port/db_name"
-      },
-      "MONGO_DB_URI": {
+      "DB_URI": {
         "description": "Mongodb url from https://cloud.mongodb.com/",
         "value": "mongodb+srv://notnot:1234@cluster0.8xf1e.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
       },
@@ -50,16 +46,8 @@
         "description": "Optional",
         "value": "true"
       },
-      "URL": {
+      "url": {
         "description": "URL your app",
-        "value": ""
-      },
-      "LOAD": {
-        "description": "list of loaded modules (seperate with space)",
-        "value": ""
-      },
-      "LOAD": {
-        "description": "list of unloaded modules (seperate with space)",
         "value": ""
       },
       "DEV_USERS": {
