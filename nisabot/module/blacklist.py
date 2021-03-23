@@ -23,19 +23,19 @@ from telegram.ext import CommandHandler, Filters, MessageHandler
 from telegram.utils.helpers import mention_html
 
 from nisabot import LOGGER, dispatcher
-from nisabot.modules.connection import connected
-from nisabot.modules.disable import DisableAbleCommandHandler
-from nisabot.modules.helper_funcs.alternate import send_message, typing_action
-from nisabot.modules.helper_funcs.chat_status import (
+from nisabot.module.connection import connected
+from nisabot.module.disable import DisableAbleCommandHandler
+from nisabot.module.helper_funcs.alternate import send_message, typing_action
+from nisabot.module.helper_funcs.chat_status import (
     user_admin,
     user_not_admin,
 )
-from nisabot.modules.helper_funcs.extraction import extract_text
-from nisabot.modules.helper_funcs.misc import split_message
-from nisabot.modules.helper_funcs.string_handling import extract_time
-from nisabot.modules.no_sql import blacklist_db
-from nisabot.modules.log_channel import loggable
-from nisabot.modules.warns import warn
+from nisabot.module.helper_funcs.extraction import extract_text
+from nisabot.module.helper_funcs.misc import split_message
+from nisabot.module.helper_funcs.string_handling import extract_time
+from nisabot.module.no_sql import blacklist_db
+from nisabot.module.log_channel import loggable
+from nisabot.module.warns import warn
 
 BLACKLIST_GROUP = 11
 
