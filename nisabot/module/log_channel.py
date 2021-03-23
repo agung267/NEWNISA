@@ -1,5 +1,5 @@
-# UserindoBot
-# Copyright (C) 2020  UserindoBot Team, <https://github.com/userbotindo/UserIndoBot.git>
+# Nisabot
+# Copyright (C) 2021 I Do Not Know, <https://github.com/agung267/NEWNISA.git>
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -16,7 +16,7 @@
 
 from functools import wraps
 
-from ubotindo.modules.helper_funcs.misc import is_module_loaded
+from nisabot.modules.helper_funcs.misc import is_module_loaded
 
 FILENAME = __name__.rsplit(".", 1)[-1]
 
@@ -26,9 +26,9 @@ if is_module_loaded(FILENAME):
     from telegram.ext import CommandHandler
     from telegram.utils.helpers import escape_markdown
 
-    from ubotindo import LOGGER, dispatcher
-    from ubotindo.modules.helper_funcs.chat_status import user_admin
-    from ubotindo.modules.no_sql import log_channel_db as db
+    from nisabot import LOGGER, dispatcher
+    from nisabot.modules.helper_funcs.chat_status import user_admin
+    from nisabot.modules.no_sql import log_channel_db as db
 
     def loggable(func):
         @wraps(func)
