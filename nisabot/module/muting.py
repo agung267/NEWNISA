@@ -23,20 +23,20 @@ from telegram.ext import CommandHandler, Filters
 from telegram.utils.helpers import mention_html
 
 from nisabot import LOGGER, dispatcher
-from nisabot.modules.helper_funcs.admin_rights import user_can_ban
-from nisabot.modules.helper_funcs.alternate import typing_action
-from nisabot.modules.helper_funcs.chat_status import (
+from nisabot.module.helper_funcs.admin_rights import user_can_ban
+from nisabot.module.helper_funcs.alternate import typing_action
+from nisabot.module.helper_funcs.chat_status import (
     bot_admin,
     can_restrict,
     is_user_admin,
     user_admin,
 )
-from nisabot.modules.helper_funcs.extraction import (
+from nisabot.module.helper_funcs.extraction import (
     extract_user,
     extract_user_and_text,
 )
-from nisabot.modules.helper_funcs.string_handling import extract_time
-from nisabot.modules.log_channel import loggable
+from nisabot.module.helper_funcs.string_handling import extract_time
+from nisabot.module.log_channel import loggable
 
 
 @bot_admin
