@@ -21,9 +21,9 @@ from telegram import ParseMode, error
 from telegram.ext import CommandHandler
 
 from nisabot import LASTFM_API_KEY, dispatcher
-from nisabot.modules.no_sql import get_collection
-from nisabot.modules.disable import DisableAbleCommandHandler
-from nisabot.modules.helper_funcs.alternate import typing_action
+from nisabot.module.no_sql import get_collection
+from nisabot.module.disable import DisableAbleCommandHandler
+from nisabot.module.helper_funcs.alternate import typing_action
 
 
 LASTFM_USER = get_collection("LAST_FM")
