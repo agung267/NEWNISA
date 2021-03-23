@@ -18,9 +18,10 @@ import threading
 import time
 from typing import Union
 
-from sqlalchemy import Column, String, Boolean, UnicodeText, Integer
+from sqlalchemy import Column, String, Boolean, UnicodeText, Integer, func, distinct
 
-from ubotindo.modules.sql import SESSION, BASE
+from emilia.modules.helper_funcs.msg_types import Types
+from emilia.modules.sql import SESSION, BASE
 
 
 class ChatAccessConnectionSettings(BASE):
@@ -33,19 +34,16 @@ class ChatAccessConnectionSettings(BASE):
         self.allow_connect_to_chat = str(allow_connect_to_chat)
 
     def __repr__(self):
-        return "<Chat access settings ({}) is {}>".format(
-            self.chat_id, self.allow_connect_to_chat
-        )
+        return "<Chat access settings ({}) is {}>".format(self.chat_id, self.allow_connect_to_chat)
 
 
 class Connection(BASE):
     __tablename__ = "connection"
     user_id = Column(Integer, primary_key=True)
     chat_id = Column(String(14))
-
     def __init__(self, user_id, chat_id):
         self.user_id = user_id
-        self.chat_id = str(chat_id)  # Ensure String
+        self.chat_id = str(chat_id) #Ensure String
 
 
 class ConnectionHistory(BASE):
@@ -54,21 +52,17 @@ class ConnectionHistory(BASE):
     chat_id = Column(String(14), primary_key=True)
     chat_name = Column(UnicodeText)
     conn_time = Column(Integer)
-
     def __init__(self, user_id, chat_id, chat_name, conn_time):
         self.user_id = user_id
         self.chat_id = str(chat_id)
         self.chat_name = str(chat_name)
         self.conn_time = int(conn_time)
-
     def __repr__(self):
-        return "<connection user {} history {}>".format(
-            self.user_id, self.chat_id
-        )
-
+        return "<connection user {} history {}>".format(self.user_id, self.chat_id)
 
 ChatAccessConnectionSettings.__table__.create(checkfirst=True)
 Connection.__table__.create(checkfirst=True)
+# ConnectionHistory.__table__.drop()
 ConnectionHistory.__table__.create(checkfirst=True)
 
 CHAT_ACCESS_LOCK = threading.RLock()
@@ -80,21 +74,17 @@ HISTORY_CONNECT = {}
 
 def allow_connect_to_chat(chat_id: Union[str, int]) -> bool:
     try:
-        chat_setting = SESSION.query(ChatAccessConnectionSettings).get(
-            str(chat_id)
-        )
+        chat_setting = SESSION.query(ChatAccessConnectionSettings).get(str(chat_id))
         if chat_setting:
             return chat_setting.allow_connect_to_chat
         return False
     finally:
         SESSION.close()
-
+        
 
 def set_allow_connect_to_chat(chat_id: Union[int, str], setting: bool):
     with CHAT_ACCESS_LOCK:
-        chat_setting = SESSION.query(ChatAccessConnectionSettings).get(
-            str(chat_id)
-        )
+        chat_setting = SESSION.query(ChatAccessConnectionSettings).get(str(chat_id))
         if not chat_setting:
             chat_setting = ChatAccessConnectionSettings(chat_id, setting)
 
@@ -124,8 +114,9 @@ def get_connected_chat(user_id):
 def curr_connection(chat_id):
     try:
         return SESSION.query(Connection).get((str(chat_id)))
-    finally:
+    finally :
         SESSION.close()
+
 
 
 def disconnect(user_id):
@@ -145,19 +136,13 @@ def add_history_conn(user_id, chat_id, chat_name):
     with CONNECTION_HISTORY_LOCK:
         conn_time = int(time.time())
         if HISTORY_CONNECT.get(int(user_id)):
-            counting = (
-                SESSION.query(ConnectionHistory.user_id)
-                .filter(ConnectionHistory.user_id == str(user_id))
-                .count()
-            )
+            counting = SESSION.query(ConnectionHistory.user_id).filter(ConnectionHistory.user_id == str(user_id)).count()
             getchat_id = {}
             for x in HISTORY_CONNECT[int(user_id)]:
-                getchat_id[HISTORY_CONNECT[int(user_id)][x]["chat_id"]] = x
+                getchat_id[HISTORY_CONNECT[int(user_id)][x]['chat_id']] = x
             if chat_id in getchat_id:
                 todeltime = getchat_id[str(chat_id)]
-                delold = SESSION.query(ConnectionHistory).get(
-                    (int(user_id), str(chat_id))
-                )
+                delold = SESSION.query(ConnectionHistory).get((int(user_id), str(chat_id)))
                 if delold:
                     SESSION.delete(delold)
                     HISTORY_CONNECT[int(user_id)].pop(todeltime)
@@ -166,45 +151,32 @@ def add_history_conn(user_id, chat_id, chat_name):
                 todel.reverse()
                 todel = todel[4:]
                 for x in todel:
-                    chat_old = HISTORY_CONNECT[int(user_id)][x]["chat_id"]
-                    delold = SESSION.query(ConnectionHistory).get(
-                        (int(user_id), str(chat_old))
-                    )
+                    chat_old = HISTORY_CONNECT[int(user_id)][x]['chat_id']
+                    delold = SESSION.query(ConnectionHistory).get((int(user_id), str(chat_old)))
                     if delold:
                         SESSION.delete(delold)
                         HISTORY_CONNECT[int(user_id)].pop(x)
         else:
             HISTORY_CONNECT[int(user_id)] = {}
-        delold = SESSION.query(ConnectionHistory).get(
-            (int(user_id), str(chat_id))
-        )
+        delold = SESSION.query(ConnectionHistory).get((int(user_id), str(chat_id)))
         if delold:
             SESSION.delete(delold)
-        history = ConnectionHistory(
-            int(user_id), str(chat_id), chat_name, conn_time
-        )
+        history = ConnectionHistory(int(user_id), str(chat_id), chat_name, conn_time)
         SESSION.add(history)
         SESSION.commit()
-        HISTORY_CONNECT[int(user_id)][conn_time] = {
-            "chat_name": chat_name,
-            "chat_id": str(chat_id),
-        }
-
+        HISTORY_CONNECT[int(user_id)][conn_time] = {'chat_name': chat_name, 'chat_id': str(chat_id)}
 
 def get_history_conn(user_id):
     if not HISTORY_CONNECT.get(int(user_id)):
         HISTORY_CONNECT[int(user_id)] = {}
     return HISTORY_CONNECT[int(user_id)]
 
-
 def clear_history_conn(user_id):
     global HISTORY_CONNECT
     todel = list(HISTORY_CONNECT[int(user_id)])
     for x in todel:
-        chat_old = HISTORY_CONNECT[int(user_id)][x]["chat_id"]
-        delold = SESSION.query(ConnectionHistory).get(
-            (int(user_id), str(chat_old))
-        )
+        chat_old = HISTORY_CONNECT[int(user_id)][x]['chat_id']
+        delold = SESSION.query(ConnectionHistory).get((int(user_id), str(chat_old)))
         if delold:
             SESSION.delete(delold)
             HISTORY_CONNECT[int(user_id)].pop(x)
@@ -219,14 +191,10 @@ def __load_user_history():
         HISTORY_CONNECT = {}
         for x in qall:
             check = HISTORY_CONNECT.get(x.user_id)
-            if check is None:
+            if check == None:
                 HISTORY_CONNECT[x.user_id] = {}
-            HISTORY_CONNECT[x.user_id][x.conn_time] = {
-                "chat_name": x.chat_name,
-                "chat_id": x.chat_id,
-            }
+            HISTORY_CONNECT[x.user_id][x.conn_time] = {'chat_name': x.chat_name, 'chat_id': x.chat_id}
     finally:
         SESSION.close()
-
 
 __load_user_history()
