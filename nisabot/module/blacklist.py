@@ -1,5 +1,5 @@
-# UserindoBot
-# Copyright (C) 2020  UserindoBot Team, <https://github.com/userbotindo/UserIndoBot.git>
+# Nisabot
+# Copyright (C) 2021 I Do Not Know, <https://github.com/agung267/NEWNISA.git>
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -22,20 +22,20 @@ from telegram.error import BadRequest
 from telegram.ext import CommandHandler, Filters, MessageHandler
 from telegram.utils.helpers import mention_html
 
-from ubotindo import LOGGER, dispatcher
-from ubotindo.modules.connection import connected
-from ubotindo.modules.disable import DisableAbleCommandHandler
-from ubotindo.modules.helper_funcs.alternate import send_message, typing_action
-from ubotindo.modules.helper_funcs.chat_status import (
+from nisabot import LOGGER, dispatcher
+from nisabot.modules.connection import connected
+from nisabot.modules.disable import DisableAbleCommandHandler
+from nisabot.modules.helper_funcs.alternate import send_message, typing_action
+from nisabot.modules.helper_funcs.chat_status import (
     user_admin,
     user_not_admin,
 )
-from ubotindo.modules.helper_funcs.extraction import extract_text
-from ubotindo.modules.helper_funcs.misc import split_message
-from ubotindo.modules.helper_funcs.string_handling import extract_time
-from ubotindo.modules.no_sql import blacklist_db
-from ubotindo.modules.log_channel import loggable
-from ubotindo.modules.warns import warn
+from nisabot.modules.helper_funcs.extraction import extract_text
+from nisabot.modules.helper_funcs.misc import split_message
+from nisabot.modules.helper_funcs.string_handling import extract_time
+from nisabot.modules.no_sql import blacklist_db
+from nisabot.modules.log_channel import loggable
+from nisabot.modules.warns import warn
 
 BLACKLIST_GROUP = 11
 
