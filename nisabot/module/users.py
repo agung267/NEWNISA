@@ -21,9 +21,9 @@ from telegram import TelegramError
 from telegram.error import BadRequest, TimedOut, Unauthorized
 from telegram.ext import CommandHandler, Filters, MessageHandler
 
-from nisabot.modules.no_sql import users_db
+from nisabot.module.no_sql import users_db
 from nisabot import LOGGER, OWNER_ID, dispatcher
-from nisabot.modules.helper_funcs.filters import CustomFilters
+from nisabot.module.helper_funcs.filters import CustomFilters
 
 USERS_GROUP = 4
 CHAT_GROUP = 10
