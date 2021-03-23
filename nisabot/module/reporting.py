@@ -35,13 +35,13 @@ from telegram.ext import (
 from telegram.utils.helpers import mention_html
 
 from nisabot import LOGGER, dispatcher
-from nisabot.modules.helper_funcs.alternate import typing_action
-from nisabot.modules.helper_funcs.chat_status import (
+from nisabot.module.helper_funcs.alternate import typing_action
+from nisabot.module.helper_funcs.chat_status import (
     user_admin,
     user_not_admin,
 )
-from nisabot.modules.log_channel import loggable
-from nisabot.modules.no_sql import get_collection
+from nisabot.module.log_channel import loggable
+from nisabot.module.no_sql import get_collection
 
 REPORT_GROUP = 5
 
