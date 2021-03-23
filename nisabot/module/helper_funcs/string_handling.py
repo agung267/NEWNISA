@@ -44,7 +44,6 @@ BTN_URL_REGEX = re.compile(
     r"(\[([^\[]+?)\]\(buttonurl:(?:/{0,2})(.+?)(:same)?\))"
 )
 
-
 def _selective_escape(to_parse: str) -> str:
     """
     Escape all invalid markdown
