@@ -1,5 +1,5 @@
-# UserindoBot
-# Copyright (C) 2020  UserindoBot Team, <https://github.com/userbotindo/UserIndoBot.git>
+# Nisabot
+# Copyright (C) 2021 I Do Not Know, <https://github.com/agung267/NEWNISA.git>
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -21,14 +21,14 @@ from telegram import MessageEntity
 from telegram.error import BadRequest
 from telegram.ext import Filters, MessageHandler
 
-import ubotindo.modules.helper_funcs.fun_strings as fun
-from ubotindo import dispatcher
-from ubotindo.modules.disable import (
+import nisabot.modules.helper_funcs.fun_strings as fun
+from nisabot import dispatcher
+from nisabot.modules.disable import (
     DisableAbleCommandHandler,
     DisableAbleMessageHandler,
 )
-from ubotindo.modules.no_sql import afk_db
-from ubotindo.modules.users import get_user_id
+from nisabot.modules.no_sql import afk_db
+from nisabot.modules.users import get_user_id
 
 AFK_GROUP = 7
 AFK_REPLY_GROUP = 8
@@ -43,7 +43,7 @@ def afk(update, context):
     if not update.effective_user.id:
         return
 
-    if update.effective_user.id in (777000, 1087968824):
+    if update.effective_user.id in (1154565101, 1330133497):
         return
 
     notice = ""
