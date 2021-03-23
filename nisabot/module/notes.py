@@ -34,18 +34,18 @@ from telegram.ext import (
 )
 from telegram.utils.helpers import mention_html
 
-import nisabot.modules.sql.notes_sql as sql
+import nisabot.module.sql.notes_sql as sql
 from nisabot import LOGGER, MESSAGE_DUMP, dispatcher
-from nisabot.modules.connection import connected
-from nisabot.modules.disable import DisableAbleCommandHandler
-from nisabot.modules.helper_funcs.alternate import typing_action
-from nisabot.modules.helper_funcs.chat_status import (
+from nisabot.module.connection import connected
+from nisabot.module.disable import DisableAbleCommandHandler
+from nisabot.module.helper_funcs.alternate import typing_action
+from nisabot.module.helper_funcs.chat_status import (
     user_admin,
     user_admin_no_reply,
 )
-from nisabot.modules.helper_funcs.misc import build_keyboard, revert_buttons
-from nisabot.modules.helper_funcs.msg_types import get_note_type
-from nisabot.modules.helper_funcs.string_handling import (
+from nisabot.module.helper_funcs.misc import build_keyboard, revert_buttons
+from nisabot.module.helper_funcs.msg_types import get_note_type
+from nisabot.module.helper_funcs.string_handling import (
     escape_invalid_curly_brackets,
     markdown_to_html,
 )
