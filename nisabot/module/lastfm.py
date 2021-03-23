@@ -1,5 +1,5 @@
-# UserindoBot
-# Copyright (C) 2020  UserindoBot Team, <https://github.com/userbotindo/UserIndoBot.git>
+# Nisabot
+# Copyright (C) 2021 I Do Not Know, <https://github.com/agung267/NEWNISA.git>
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -20,10 +20,10 @@ import requests
 from telegram import ParseMode, error
 from telegram.ext import CommandHandler
 
-from ubotindo import LASTFM_API_KEY, dispatcher
-from ubotindo.modules.no_sql import get_collection
-from ubotindo.modules.disable import DisableAbleCommandHandler
-from ubotindo.modules.helper_funcs.alternate import typing_action
+from nisabot import LASTFM_API_KEY, dispatcher
+from nisabot.modules.no_sql import get_collection
+from nisabot.modules.disable import DisableAbleCommandHandler
+from nisabot.modules.helper_funcs.alternate import typing_action
 
 
 LASTFM_USER = get_collection("LAST_FM")
