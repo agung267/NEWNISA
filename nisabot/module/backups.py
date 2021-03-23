@@ -1,5 +1,5 @@
-# UserindoBot
-# Copyright (C) 2020  UserindoBot Team, <https://github.com/userbotindo/UserIndoBot.git>
+# Nisabot
+# Copyright (C) 2021 I Do Not Know, <https://github.com/agung267/NEWNISA.git>
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -23,22 +23,22 @@ from telegram import ParseMode
 from telegram.error import BadRequest
 from telegram.ext import CommandHandler
 
-# from ubotindo.modules.sql import warns_sql as warnssql
-from ubotindo.modules.no_sql import blacklist_db
+# from nisabot.modules.sql import warns_sql as warnssql
+from nisabot.modules.no_sql import blacklist_db
 
-# from ubotindo.modules.sql import cust_filters_sql as filtersql
-# import ubotindo.modules.sql.welcome_sql as welcsql
-import ubotindo.modules.sql.locks_sql as locksql
-import ubotindo.modules.sql.notes_sql as sql
+# from nisabot.modules.sql import cust_filters_sql as filtersql
+# import nisabot.modules.sql.welcome_sql as welcsql
+import nisabot.modules.sql.locks_sql as locksql
+import nisabot.modules.sql.notes_sql as sql
 
-# from ubotindo.modules.rules import get_rules
-from ubotindo.modules.rules import chat_rules
-from ubotindo import DEV_USERS, LOGGER, MESSAGE_DUMP, OWNER_ID, dispatcher
-from ubotindo.__main__ import DATA_IMPORT
-from ubotindo.modules.connection import connected
-from ubotindo.modules.helper_funcs.alternate import typing_action
-from ubotindo.modules.helper_funcs.chat_status import user_admin
-from ubotindo.modules.no_sql import disable_db
+# from nisabot.modules.rules import get_rules
+from nisabot.modules.rules import chat_rules
+from nisabot import DEV_USERS, LOGGER, MESSAGE_DUMP, OWNER_ID, dispatcher
+from nisabot.__main__ import DATA_IMPORT
+from nisabot.modules.connection import connected
+from nisabot.modules.helper_funcs.alternate import typing_action
+from nisabot.modules.helper_funcs.chat_status import user_admin
+from nisabot.modules.no_sql import disable_db
 
 
 @user_admin
@@ -357,7 +357,7 @@ def export_data(update, context):
         },
     }
     baccinfo = json.dumps(backup, indent=4)
-    with open("Userindo-Bot{}.backup".format(chat_id), "w") as f:
+    with open("nisabot-Bot{}.backup".format(chat_id), "w") as f:
         f.write(str(baccinfo))
     context.bot.sendChatAction(current_chat_id, "upload_document")
     tgl = time.strftime("%H:%M:%S - %d/%m/%Y", time.localtime(time.time()))
@@ -373,15 +373,15 @@ def export_data(update, context):
         pass
     context.bot.sendDocument(
         current_chat_id,
-        document=open("Userindo-Bot{}.backup".format(chat_id), "rb"),
-        caption="*Successfully backup:*\nChat: `{}`\nChat ID: `{}`\nOn: `{}`\n\nNote: This `Userindobot-Backup` is specially made for notes.".format(
+        document=open("nisabot-Bot{}.backup".format(chat_id), "rb"),
+        caption="*Successfully backup:*\nChat: `{}`\nChat ID: `{}`\nOn: `{}`\n\nNote: This `nisabot-Backup` is specially made for notes.".format(
             chat.title, chat_id, tgl
         ),
         timeout=360,
         reply_to_message_id=msg.message_id,
         parse_mode=ParseMode.MARKDOWN,
     )
-    os.remove("Userindo-Bot{}.backup".format(chat_id))  # Cleaning file
+    os.remove("nisabot-Bot{}.backup".format(chat_id))  # Cleaning file
 
 
 # Temporary data
