@@ -40,15 +40,11 @@
       },
       "WEBHOOK": {
         "description": "Optional",
-        "value": "true"
+        "value": "ANYTHING"
       },
       "url": {
-        "description": "URL your app",
+        "description": "The Heroku App URL similar to https://<appname>.herokuapp.com/",
         "value": ""
-      },
-      "DEV_USERS": {
-        "description": "seperate with space",
-        "value": "1123523488"
       },
       "SUDO_USERS": {
         "description": "A space separated list of user_ids which should be considered sudo users",
