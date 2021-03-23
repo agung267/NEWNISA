@@ -1,5 +1,5 @@
-# UserindoBot
-# Copyright (C) 2020  UserindoBot Team, <https://github.com/userbotindo/UserIndoBot.git>
+# Nisabot
+# Copyright (C) 2020  UserindoBot Team, <https://github.com/agung267/NEWNISA.git>
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -36,7 +36,7 @@ from telegram.utils.helpers import escape_markdown
 from sqlalchemy.exc import SQLAlchemyError, DBAPIError
 
 
-from ubotindo import (
+from nisabot import (
     dispatcher,
     DEV_USERS,
     SUDO_USERS,
@@ -55,18 +55,18 @@ from ubotindo import (
 
 # needed to dynamically load modules
 # NOTE: Module order is not guaranteed, specify that in the config file!
-from ubotindo.modules import ALL_MODULES
-from ubotindo.modules.helper_funcs.chat_status import is_user_admin
-from ubotindo.modules.helper_funcs.filters import CustomFilters
-from ubotindo.modules.helper_funcs.misc import paginate_modules
-from ubotindo.modules.helper_funcs.alternate import typing_action
+from nisabot.modules import ALL_MODULES
+from nisabot.modules.helper_funcs.chat_status import is_user_admin
+from nisabot.modules.helper_funcs.filters import CustomFilters
+from nisabot.modules.helper_funcs.misc import paginate_modules
+from nisabot.modules.helper_funcs.alternate import typing_action
 
 
 PM_START_TEXT = f"""
 Hey there! my name is *{dispatcher.bot.first_name}*.
 Any questions on how to use me? use /help
 
-Join Our [Group](https://t.me/userbotindo) If You wanna Report Issue 🙂
+Join Our [Group](https://t.me/temengobloksu) If You wanna Report Issue 🙂
 
 I'm here to make your group management fun and easy!
 I have lots of handy features ☺️ such as :
@@ -74,7 +74,7 @@ I have lots of handy features ☺️ such as :
 • flood control.         • Note'S keeping system.
 • Warning System.   • Predetermined Filters.
 
-*Managed With ❤️ By :* [UserbotIndo Team](https://t.me/userbotindo)
+*Managed With ❤️ By :* [I Do Not Know](https://t.me/irvn267)
 
 Wanna Add me to your Group? Just click the button below!
 """
@@ -82,10 +82,10 @@ Wanna Add me to your Group? Just click the button below!
 buttons = [
     [
         InlineKeyboardButton(
-            text="Add to Group 👥", url="t.me/userbotindobot?startgroup=true"
+            text="Add to Group 👥", url="t.me/fake762_bot?startgroup=true"
         ),
         InlineKeyboardButton(
-            text="Gban Logs 🚫", url="https://t.me/UserIndoBotBannedLog"
+            text="Gban Logs 🚫", url="https://t.me/nisabotlogs"
         ),
     ]
 ]
@@ -98,7 +98,7 @@ buttons += [
             url=f"t.me/{dispatcher.bot.username}?start=help",
         ),
         InlineKeyboardButton(
-            text="Support Group 🎗️", url="https://t.me/userbotindo"
+            text="Support Group 🎗️", url="https://t.me/temengobloksu"
         ),
     ]
 ]
@@ -164,7 +164,7 @@ GDPR = []
 
 for module_name in ALL_MODULES:
     imported_module = importlib.import_module(
-        "ubotindo.modules." + module_name
+        "nisabot.modules." + module_name
     )
     if not hasattr(imported_module, "__mod_name__"):
         imported_module.__mod_name__ = imported_module.__name__
@@ -275,7 +275,7 @@ def start(update, context):
 
         else:
             update.effective_message.reply_photo(
-                "https://i.ibb.co/zJdLsyg/Userindobot.png",
+                "https://i.ibb.co/t2Z6KPc/IMG-20210219-105053-166.jpg",
                 PM_START_TEXT,
                 reply_markup=InlineKeyboardMarkup(buttons),
                 parse_mode=ParseMode.MARKDOWN,
