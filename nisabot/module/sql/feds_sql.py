@@ -20,7 +20,7 @@ from sqlalchemy import Column, String, UnicodeText, Integer, Boolean
 from telegram.error import BadRequest, Unauthorized
 
 from nisabot import dispatcher
-from nisabot.modules.sql import SESSION, BASE
+from nisabot.module.sql import SESSION, BASE
 
 
 class Federations(BASE):
