@@ -29,21 +29,21 @@ from telegram.ext import (
 from telegram.utils.helpers import escape_markdown, mention_html
 
 from nisabot import LOGGER, dispatcher
-from nisabot.modules.connection import connected
-from nisabot.modules.disable import DisableAbleCommandHandler
-from nisabot.modules.helper_funcs.alternate import send_message, typing_action
-from nisabot.modules.helper_funcs.chat_status import user_admin
-from nisabot.modules.helper_funcs.extraction import extract_text
-from nisabot.modules.helper_funcs.filters import CustomFilters
-from nisabot.modules.helper_funcs.misc import build_keyboard_parser
-from nisabot.modules.helper_funcs.msg_types import get_filter_type
-from nisabot.modules.helper_funcs.string_handling import (
+from nisabot.module.connection import connected
+from nisabot.module.disable import DisableAbleCommandHandler
+from nisabot.module.helper_funcs.alternate import send_message, typing_action
+from nisabot.module.helper_funcs.chat_status import user_admin
+from nisabot.module.helper_funcs.extraction import extract_text
+from nisabot.module.helper_funcs.filters import CustomFilters
+from nisabot.module.helper_funcs.misc import build_keyboard_parser
+from nisabot.module.helper_funcs.msg_types import get_filter_type
+from nisabot.module.helper_funcs.string_handling import (
     button_markdown_parser,
     escape_invalid_curly_brackets,
     markdown_to_html,
     split_quotes,
 )
-from nisabot.modules.sql import cust_filters_sql as sql
+from nisabot.module.sql import cust_filters_sql as sql
 
 HANDLER_GROUP = 15
 
