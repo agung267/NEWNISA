@@ -54,12 +54,12 @@ from nisabot import (
     spamwtc,
 )
 from nisabot.__main__ import GDPR, STATS, USER_INFO
-from nisabot.modules.disable import DisableAbleCommandHandler
-from nisabot.modules.global_bans import check_cas
-from nisabot.modules.helper_funcs.alternate import send_action, typing_action
-from nisabot.modules.helper_funcs.extraction import extract_user
-from nisabot.modules.helper_funcs.filters import CustomFilters
-from nisabot.modules.no_sql.afk_db import is_afk
+from nisabot.module.disable import DisableAbleCommandHandler
+from nisabot.module.global_bans import check_cas
+from nisabot.module.helper_funcs.alternate import send_action, typing_action
+from nisabot.module.helper_funcs.extraction import extract_user
+from nisabot.module.helper_funcs.filters import CustomFilters
+from nisabot.module.no_sql.afk_db import is_afk
 
 
 @typing_action
