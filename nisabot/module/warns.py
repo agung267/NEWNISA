@@ -37,26 +37,26 @@ from telegram.ext import (
 from telegram.utils.helpers import escape_markdown, mention_html
 
 from nisabot import dispatcher  # BAN_STICKER
-from nisabot.modules.connection import connected
-from nisabot.modules.disable import DisableAbleCommandHandler
-from nisabot.modules.helper_funcs.alternate import typing_action
-from nisabot.modules.helper_funcs.chat_status import (
+from nisabot.module.connection import connected
+from nisabot.module.disable import DisableAbleCommandHandler
+from nisabot.module.helper_funcs.alternate import typing_action
+from nisabot.module.helper_funcs.chat_status import (
     bot_admin,
     can_restrict,
     is_user_admin,
     user_admin,
     user_admin_no_reply,
 )
-from nisabot.modules.helper_funcs.extraction import (
+from nisabot.module.helper_funcs.extraction import (
     extract_text,
     extract_user,
     extract_user_and_text,
 )
-from nisabot.modules.helper_funcs.filters import CustomFilters
-from nisabot.modules.helper_funcs.misc import split_message
-from nisabot.modules.helper_funcs.string_handling import split_quotes
-from nisabot.modules.log_channel import loggable
-from nisabot.modules.sql import warns_sql as sql
+from nisabot.module.helper_funcs.filters import CustomFilters
+from nisabot.module.helper_funcs.misc import split_message
+from nisabot.module.helper_funcs.string_handling import split_quotes
+from nisabot.module.log_channel import loggable
+from nisabot.module.sql import warns_sql as sql
 
 WARN_HANDLER_GROUP = 9
 CURRENT_WARNING_FILTER_STRING = (
