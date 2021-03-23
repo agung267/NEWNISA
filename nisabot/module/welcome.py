@@ -38,7 +38,7 @@ from telegram.utils.helpers import (
     escape_markdown,
 )
 
-import nisabot.modules.sql.welcome_sql as sql
+import nisabot.module.sql.welcome_sql as sql
 from nisabot import (
     DEV_USERS,
     LOGGER,
@@ -47,25 +47,25 @@ from nisabot import (
     dispatcher,
     spamwtc,
 )
-from nisabot.modules.helper_funcs.alternate import send_message, typing_action
-from nisabot.modules.helper_funcs.chat_status import (
+from nisabot.module.helper_funcs.alternate import send_message, typing_action
+from nisabot.module.helper_funcs.chat_status import (
     is_user_ban_protected,
     user_admin,
     can_restrict,
 )
-from nisabot.modules.helper_funcs.misc import (
+from nisabot.module.helper_funcs.misc import (
     build_keyboard,
     build_keyboard_parser,
     revert_buttons,
 )
-from nisabot.modules.helper_funcs.msg_types import get_welcome_type
-from nisabot.modules.helper_funcs.string_handling import (
+from nisabot.module.helper_funcs.msg_types import get_welcome_type
+from nisabot.module.helper_funcs.string_handling import (
     escape_invalid_curly_brackets,
     markdown_parser,
     markdown_to_html,
 )
-from nisabot.modules.log_channel import loggable
-from nisabot.modules.no_sql.gban_db import is_user_gbanned
+from nisabot.module.log_channel import loggable
+from nisabot.module.no_sql.gban_db import is_user_gbanned
 
 VALID_WELCOME_FORMATTERS = [
     "first",
