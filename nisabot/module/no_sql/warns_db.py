@@ -14,21 +14,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-import threading
-
-from sqlalchemy import (
-    Integer,
-    Column,
-    String,
-    UnicodeText,
-    func,
-    distinct,
-    Boolean,
-)
-from sqlalchemy.dialects import postgresql
-
-from ubotindo.modules.sql import SESSION, BASE
-
+from nisabot.module.no_sql import get_collection
 
 class Warns(BASE):
     __tablename__ = "warns"
