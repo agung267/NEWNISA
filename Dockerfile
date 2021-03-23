@@ -1,15 +1,14 @@
 # set base image (host OS)
-FROM python:3.8
+FROM python:3.9
 
 # set the working directory in the container
-WORKDIR /nisabot/
+WORKDIR /anjani/
 
-RUN apt -qq update && apt -qq upgrade
+RUN apt -qq update && apt -qq upgrade -y
 RUN apt -qq install -y --no-install-recommends \
-    curl \
-    git \
-    gnupg2 \
     wget \
+    git \
+    gnupg2 
 
 # copy the dependencies file to the working directory
 COPY requirements.txt .
@@ -21,4 +20,4 @@ RUN pip install -r requirements.txt
 COPY . .
 
 # command to run on container start
-CMD [ "bash", "./start" ]
+CMD ["python3","-m","nisabot"]
