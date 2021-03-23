@@ -15,7 +15,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 """User(s) AFK database."""
 
-from nisabot.modules.no_sql import get_collection
+from nisabot.module.no_sql import get_collection
 
 
 AFK_USERS = get_collection("AFK_USERS")
