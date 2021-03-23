@@ -1,0 +1,74 @@
+{
+    "name": "NOTNOT",
+    "description": "Telegram's sassiest group manager. Modular Telegram group management bot!",
+    "keywords": [
+      "telegram",
+      "best",
+      "group",
+      "manager",
+      "3"
+    ],
+    "repository": "https://github.com/agung267/Anjani",
+    "env": {
+      "ENV": {
+        "description": "Setting this to ANYTHING will enable env variables",
+        "value": "ANYTHING"
+      },
+      "API_ID": {
+        "description": "Get thais value from https://my.telegram.org/apps",
+        "value": "1633495"  
+      },
+      "API_HASH": {
+        "description": "Get thais value from https://my.telegram.org/apps",
+        "value": "856d72eea076dab8b431be05dff7de50"
+      },
+      "TOKEN": {
+        "description": "Your bot token, as a string.",
+        "value": "1619933762:AAGXYgLby6KRHee43lLQVBCuGvAlhRaTt9A"
+      },
+      "DB_URI": {
+        "description": "Mongodb url from https://cloud.mongodb.com/",
+        "value": "mongodb+srv://notnot:1234@cluster0.8xf1e.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+      },
+      "OWNER_ID": {
+        "description": "An integer of consisting of your owner ID",
+        "value": "1154565101"
+      },
+      "DOWNLOAD_PATH": {
+        "description": "Set path to download directory",
+        "value": "./downloads/"
+      },
+      "SW_API": {
+        "description": "Spamwatch API",
+        "value": "3f04Fx3lMDVReYqodKp1~M7bjR5SShLRoUX0DJG2~NJuxdhutSkgTS1D0skTC_9g"
+      },
+      "LOG_CHANNEL": {
+        "description": "optional: a chat where your replied saved messages are stored, to stop people deleting their old",
+        "value": "1001226090919"
+      },
+      "SUDO_USERS": {
+        "description": "A space separated list of user_ids which should be considered sudo users",
+        "value": "1123523488"
+      },
+      "SUPPORT_USERS": {
+        "description": "A space separated list of user_ids which should be considered support users (can gban/ungban, nothing else)",
+        "value": "1123523488"
+      },
+      "WHITELIST_USERS": {
+        "description": "A space separated list of user_ids which should be considered whitelisted - they can't be banned.",
+        "value": "1123523488"
+      },
+      "DONATION": {
+        "description": "Optional: wallet you would like to receive donations.",
+        "value": "DDfw8dSx9o2Em7F1QPmZ2YW7uLAzz2mmLK"
+      }
+    },
+    "addons": [
+      {
+        "plan": "heroku-postgresql",
+        "options": {
+          "version": "12"
+        }
+      }
+    ]
+  }
