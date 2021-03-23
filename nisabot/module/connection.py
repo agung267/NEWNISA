@@ -21,10 +21,10 @@ from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode
 from telegram.error import BadRequest, Unauthorized
 from telegram.ext import CallbackQueryHandler, CommandHandler
 
-import nisabot.modules.sql.connection_sql as sql
+import nisabot.module.sql.connection_sql as sql
 from nisabot import DEV_USERS, SUDO_USERS, dispatcher
-from nisabot.modules.helper_funcs import chat_status
-from nisabot.modules.helper_funcs.alternate import send_message, typing_action
+from nisabot.module.helper_funcs import chat_status
+from nisabot.module.helper_funcs.alternate import send_message, typing_action
 
 user_admin = chat_status.user_admin
 
