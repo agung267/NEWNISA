@@ -1,5 +1,5 @@
 {
-    "name": "NOTNOT",
+    "name": "NEWNISA",
     "description": "Telegram's sassiest group manager. Modular Telegram group management bot!",
     "keywords": [
       "telegram",
@@ -8,7 +8,7 @@
       "manager",
       "3"
     ],
-    "repository": "https://github.com/agung267/Anjani",
+    "repository": "https://github.com/agung267/NEWNISA",
     "env": {
       "ENV": {
         "description": "Setting this to ANYTHING will enable env variables",
@@ -24,7 +24,7 @@
       },
       "TOKEN": {
         "description": "Your bot token, as a string.",
-        "value": "1619933762:AAGXYgLby6KRHee43lLQVBCuGvAlhRaTt9A"
+        "value": "1704565334:AAHAqOWrIpl3q_hYhT7L5zSyQ2A60J_J8M4"
       },
       "DB_URI": {
         "description": "Mongodb url from https://cloud.mongodb.com/",
@@ -34,17 +34,37 @@
         "description": "An integer of consisting of your owner ID",
         "value": "1154565101"
       },
-      "DOWNLOAD_PATH": {
-        "description": "Set path to download directory",
-        "value": "./downloads/"
+      "MESSAGE_DUMP": {
+        "description": "chat_id to make sure 'save from' messages persist",
+        "value": "-1001226090919"
       },
       "SW_API": {
         "description": "Spamwatch API",
         "value": "3f04Fx3lMDVReYqodKp1~M7bjR5SShLRoUX0DJG2~NJuxdhutSkgTS1D0skTC_9g"
       },
-      "LOG_CHANNEL": {
-        "description": "optional: a chat where your replied saved messages are stored, to stop people deleting their old",
-        "value": "1001226090919"
+      "GBAN_LOGS": {
+        "description": "chat_id for your global ban logs",
+        "value": "-535065671"
+      },
+      "WEBHOOK": {
+        "description": "Optional",
+        "value": "true"
+      },
+      "URL": {
+        "description": "URL your app",
+        "value": ""
+      },
+      "LOAD": {
+        "description": "list of loaded modules (seperate with space)",
+        "value": ""
+      },
+      "LOAD": {
+        "description": "list of unloaded modules (seperate with space)",
+        "value": ""
+      },
+      "DEV_USERS": {
+        "description": "seperate with space",
+        "value": "1123523488"
       },
       "SUDO_USERS": {
         "description": "A space separated list of user_ids which should be considered sudo users",
@@ -61,7 +81,35 @@
       "DONATION": {
         "description": "Optional: wallet you would like to receive donations.",
         "value": "DDfw8dSx9o2Em7F1QPmZ2YW7uLAzz2mmLK"
-      }
+      },
+      "PORT": {
+        "description": "Don't change it",
+        "value": "5000"
+      },
+      "STRICT_GBAN": {
+        "description": "",
+        "value": "true"
+      },
+      "WORKERS": {
+        "description": "Number of subthreads to use. This is the recommended amount - see for yourself what works best!",
+        "value": "8"
+      },
+      "BAN_STICKER": {
+        "description": "banhammer marie sticker",
+        "value": "CAACAgIAAx0CUBxSZgABC2nhYFokg3XZEgxeU_ZU4Yp-yVQxDP4AAgEAA8A2TxMYLnMwqz8tUR4E"
+      },
+      "API_OPENWEATHER": {
+        "description": "OpenWeather API",
+        "value": "b3680672528fbeef78310849b5ed6464"
+      },
+      "SPAMWATCH_API": {
+       "description": "Your SpamWatch token",
+       "value": "gQ~Lo53LbvIgu87gtPYTU6_6fyBQzlJCLNtfNHcDh3oOszYCYNHODvP3nBaMX~wE"
+      },
+      "LASTFM_API_KEY": {
+       "description": "Your Lastfm api key",
+       "value": ""
+      },
     },
     "addons": [
       {
