@@ -22,20 +22,20 @@ from telegram.ext import CommandHandler, MessageHandler
 from telegram.utils.helpers import escape_markdown
 
 from nisabot import dispatcher
-from nisabot.modules.connection import connected
-from nisabot.modules.helper_funcs.alternate import send_message, typing_action
-from nisabot.modules.helper_funcs.handlers import CMD_STARTERS
-from nisabot.modules.helper_funcs.misc import is_module_loaded
+from nisabot.module.connection import connected
+from nisabot.module.helper_funcs.alternate import send_message, typing_action
+from nisabot.module.helper_funcs.handlers import CMD_STARTERS
+from nisabot.module.helper_funcs.misc import is_module_loaded
 
 FILENAME = __name__.rsplit(".", 1)[-1]
 
 # If module is due to be loaded, then setup all the magical handlers
 if is_module_loaded(FILENAME):
-    from nisabot.modules.helper_funcs.chat_status import (
+    from nisabot.module.helper_funcs.chat_status import (
         is_user_admin,
         user_admin,
     )
-    from nisabot.modules.no_sql import disable_db
+    from nisabot.module.no_sql import disable_db
 
     DISABLE_CMDS = []
     DISABLE_OTHER = []
