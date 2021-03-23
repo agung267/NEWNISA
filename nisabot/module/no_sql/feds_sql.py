@@ -1,5 +1,5 @@
-# UserindoBot
-# Copyright (C) 2020  UserindoBot Team, <https://github.com/userbotindo/UserIndoBot.git>
+# Nisabot
+# Copyright (C) 2021 I Do Not Know, <https://github.com/agung267/NEWNISA.git>
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -14,14 +14,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-import threading
-
-from sqlalchemy import Column, String, UnicodeText, Integer, Boolean
-from telegram.error import BadRequest, Unauthorized
-
-from ubotindo import dispatcher
-from ubotindo.modules.sql import SESSION, BASE
-
+from nisabot.module.no_sql import get_collection
 
 class Federations(BASE):
     __tablename__ = "feds"
