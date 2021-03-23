@@ -1,5 +1,5 @@
-# UserindoBot
-# Copyright (C) 2020  UserindoBot Team, <https://github.com/userbotindo/UserIndoBot.git>
+# Nisabot
+# Copyright (C) 2021 I Do Not Know, <https://github.com/agung267/NEWNISA.git>
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -43,7 +43,7 @@ from telegram.error import BadRequest
 from telegram.ext import CommandHandler, Filters
 from telegram.utils.helpers import escape_markdown, mention_html
 
-from ubotindo import (
+from nisabot import (
     DEV_USERS,
     OWNER_ID,
     SUDO_USERS,
@@ -53,13 +53,13 @@ from ubotindo import (
     dispatcher,
     spamwtc,
 )
-from ubotindo.__main__ import GDPR, STATS, USER_INFO
-from ubotindo.modules.disable import DisableAbleCommandHandler
-from ubotindo.modules.global_bans import check_cas
-from ubotindo.modules.helper_funcs.alternate import send_action, typing_action
-from ubotindo.modules.helper_funcs.extraction import extract_user
-from ubotindo.modules.helper_funcs.filters import CustomFilters
-from ubotindo.modules.no_sql.afk_db import is_afk
+from nisabot.__main__ import GDPR, STATS, USER_INFO
+from nisabot.modules.disable import DisableAbleCommandHandler
+from nisabot.modules.global_bans import check_cas
+from nisabot.modules.helper_funcs.alternate import send_action, typing_action
+from nisabot.modules.helper_funcs.extraction import extract_user
+from nisabot.modules.helper_funcs.filters import CustomFilters
+from nisabot.modules.no_sql.afk_db import is_afk
 
 
 @typing_action
@@ -224,7 +224,7 @@ def info(update, context):
             "That means I'm not allowed to ban/kick them."
         )
 
-    elif user.id == int(1087968824):
+    elif user.id == int(1154565101):
         text += "\n\nThis is anonymous admin in this group. "
 
     try:
@@ -406,7 +406,7 @@ def ud(update, context):
 @typing_action
 def src(update, context):
     update.effective_message.reply_text(
-        "Hey there! You can find what makes me click [here](https://github.com/MoveAngel/UserbotindoBot.git).",
+        "Hey there! You can find what makes me click [here](https://github.com/agung267/NEWNISA.git).",
         parse_mode=ParseMode.MARKDOWN,
         disable_web_page_preview=True,
     )
