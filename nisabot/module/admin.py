@@ -24,26 +24,26 @@ from telegram.ext import CommandHandler, Filters
 from telegram.utils.helpers import mention_html
 
 from nisabot import dispatcher
-from nisabot.modules.connection import connected
-from nisabot.modules.disable import DisableAbleCommandHandler
-from nisabot.modules.helper_funcs.admin_rights import (
+from nisabot.module.connection import connected
+from nisabot.module.disable import DisableAbleCommandHandler
+from nisabot.module.helper_funcs.admin_rights import (
     user_can_changeinfo,
     user_can_pin,
     user_can_promote,
 )
-from nisabot.modules.helper_funcs.alternate import typing_action
-from nisabot.modules.helper_funcs.chat_status import (
+from nisabot.module.helper_funcs.alternate import typing_action
+from nisabot.module.helper_funcs.chat_status import (
     bot_admin,
     can_pin,
     can_promote,
     user_admin,
     ADMIN_CACHE,
 )
-from nisabot.modules.helper_funcs.extraction import (
+from nisabot.module.helper_funcs.extraction import (
     extract_user,
     extract_user_and_text,
 )
-from nisabot.modules.log_channel import loggable
+from nisabot.module.log_channel import loggable
 
 
 @bot_admin
