@@ -19,14 +19,14 @@ import sys
 from nisabot import LOAD, LOGGER, NO_LOAD
 
 
-def __list_all_modules():
+def __list_all_module():
     import glob
     from os.path import basename, dirname, isfile
 
     # This generates a list of modules in this folder for the * in __main__ to
     # work.
     mod_paths = glob.glob(dirname(__file__) + "/*.py")
-    all_modules = [
+    all_module = [
         basename(f)[:-3]
         for f in mod_paths
         if isfile(f) and f.endswith(".py") and not f.endswith("__init__.py")
@@ -36,7 +36,7 @@ def __list_all_modules():
         to_load = LOAD
         if to_load:
             if not all(
-                any(mod == module_name for module_name in all_modules)
+                any(mod == module_name for module_name in all_module)
                 for mod in to_load
             ):
                 LOGGER.error("Invalid loadorder names. Quitting.")
@@ -51,9 +51,9 @@ def __list_all_modules():
 
         return to_load
 
-    return all_modules
+    return all_module
 
 
-ALL_MODULES = sorted(__list_all_modules())
-LOGGER.info("Modules to load: %s", str(ALL_MODULES))
-__all__ = ALL_MODULES + ["ALL_MODULES"]
+ALL_MODULE = sorted(__list_all_module())
+LOGGER.info("Modules to load: %s", str(ALL_MODULE))
+__all__ = ALL_MODULE + ["ALL_MODULE"]
