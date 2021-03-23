@@ -28,10 +28,10 @@ from telegram.ext import CommandHandler, Filters
 from telegram.utils.helpers import escape_markdown
 
 from nisabot import dispatcher
-from nisabot.modules.no_sql import get_collection
-from nisabot.modules.helper_funcs.alternate import typing_action
-from nisabot.modules.helper_funcs.chat_status import user_admin
-from nisabot.modules.helper_funcs.string_handling import markdown_parser
+from nisabot.module.no_sql import get_collection
+from nisabot.module.helper_funcs.alternate import typing_action
+from nisabot.module.helper_funcs.chat_status import user_admin
+from nisabot.module.helper_funcs.string_handling import markdown_parser
 
 
 RULES_DATA = get_collection("RULES")
