@@ -15,7 +15,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 """Global bans utils."""
 
-from nisabot.modules.no_sql import get_collection
+from nisabot.module.no_sql import get_collection
 
 GBAN_USER = get_collection("GBANS")
 GBAN_SETTINGS = get_collection("GBAN_SETTINGS")
