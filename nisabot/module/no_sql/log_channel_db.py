@@ -15,7 +15,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 """Channel log database."""
 
-from nisabot.modules.no_sql import get_collection
+from nisabot.module.no_sql import get_collection
 
 
 LOG_DATA = get_collection("LOG_CHANNELS")
