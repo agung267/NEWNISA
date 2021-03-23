@@ -28,8 +28,8 @@ from nisabot.module.no_sql import blacklist_db
 
 # from nisabot.module.sql import cust_filters_sql as filtersql
 # import nisabot.module.sql.welcome_sql as welcsql
-import nisabot.module.sql.locks_sql as locksql
-import nisabot.module.sql.notes_sql as sql
+import nisabot.module.no_sql import locks_db
+import nisabot.module.no_sql import notes_db
 
 # from nisabot.module.rules import get_rules
 from nisabot.module.rules import chat_rules
