@@ -16,7 +16,7 @@
 
 from functools import wraps
 
-from nisabot.modules.helper_funcs.misc import is_module_loaded
+from nisabot.module.helper_funcs.misc import is_module_loaded
 
 FILENAME = __name__.rsplit(".", 1)[-1]
 
@@ -27,8 +27,8 @@ if is_module_loaded(FILENAME):
     from telegram.utils.helpers import escape_markdown
 
     from nisabot import LOGGER, dispatcher
-    from nisabot.modules.helper_funcs.chat_status import user_admin
-    from nisabot.modules.no_sql import log_channel_db as db
+    from nisabot.module.helper_funcs.chat_status import user_admin
+    from nisabot.module.no_sql import log_channel_db as db
 
     def loggable(func):
         @wraps(func)
