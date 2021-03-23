@@ -1,8 +1,8 @@
 import threading
 from typing import Union
 
-from ubotindo.modules.helper_funcs.msg_types import Types
-from ubotindo.modules.sql import BASE, SESSION
+from nisabot.modules.helper_funcs.msg_types import Types
+from nisabot.modules.sql import BASE, SESSION
 from sqlalchemy import (
     BigInteger,
     Boolean,
