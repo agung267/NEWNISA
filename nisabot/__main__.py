@@ -162,7 +162,7 @@ USER_SETTINGS = {}
 
 GDPR = []
 
-for module_name in ALL_MODULES:
+for module_name in ALL_MODULE:
     imported_module = importlib.import_module(
         "nisabot.module." + module_name
     )
