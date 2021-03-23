@@ -1,5 +1,5 @@
-# UserindoBot
-# Copyright (C) 2020  UserindoBot Team, <https://github.com/userbotindo/UserIndoBot.git>
+# Nisabot
+# Copyright (C) 2021 I Do Not Know, <https://github.com/agung267/NEWNISA.git>
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -15,7 +15,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 """Global bans utils."""
 
-from ubotindo.modules.no_sql import get_collection
+from nisabot.modules.no_sql import get_collection
 
 GBAN_USER = get_collection("GBANS")
 GBAN_SETTINGS = get_collection("GBAN_SETTINGS")
