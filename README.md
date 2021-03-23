@@ -170,5 +170,6 @@ it is necessary to migrate it in the DB.
 The `__stats__()` function is for retrieving module statistics, eg number of users, number of chats. This is accessed
 through the `/stats` command, which is only available to the bot owner.
 
-###Heroku
+## Heroku
+
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/agung267/NEWNISA.git)
