@@ -23,8 +23,8 @@ from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode
 from telegram.error import BadRequest
 
 from nisabot import dispatcher
-from nisabot.modules.disable import DisableAbleCommandHandler
-from nisabot.modules.helper_funcs.alternate import typing_action
+from nisabot.module.disable import DisableAbleCommandHandler
+from nisabot.module.helper_funcs.alternate import typing_action
 
 GITHUB = "https://github.com"
 DEVICES_DATA = "https://raw.githubusercontent.com/androidtrackers/certified-android-devices/master/by_device.json"
