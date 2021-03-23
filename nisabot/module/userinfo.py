@@ -21,10 +21,10 @@ from telegram import MAX_MESSAGE_LENGTH, Message, ParseMode, User
 from telegram.utils.helpers import escape_markdown
 
 from nisabot import DEV_USERS, dispatcher
-from nisabot.modules.disable import DisableAbleCommandHandler
-from nisabot.modules.no_sql import get_collection
-from nisabot.modules.helper_funcs.alternate import typing_action
-from nisabot.modules.helper_funcs.extraction import extract_user
+from nisabot.module.disable import DisableAbleCommandHandler
+from nisabot.module.no_sql import get_collection
+from nisabot.module.helper_funcs.alternate import typing_action
+from nisabot.module.helper_funcs.extraction import extract_user
 
 
 USER_INFO = get_collection("USER_INFO")
