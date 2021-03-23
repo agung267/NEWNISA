@@ -1,6 +1,6 @@
 """Initial app framework"""
-# UserindoBot
-# Copyright (C) 2020  UserindoBot Team, <https://github.com/userbotindo/UserIndoBot.git>
+# Nisabot
+# Copyright (C) 2021  Nisabot Team, <https://github.com/agung267/NEWNISA.git>
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -124,7 +124,7 @@ WHITELIST_USERS = list(WHITELIST_USERS)
 
 # Load at end to ensure all prev variables have been set
 # pylint: disable=C0413
-from ubotindo.modules.helper_funcs.handlers import (
+from nisabot.modules.helper_funcs.handlers import (
     CustomCommandHandler,
 )
 
