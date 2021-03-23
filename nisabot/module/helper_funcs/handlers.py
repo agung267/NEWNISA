@@ -1,5 +1,5 @@
-# UserindoBot
-# Copyright (C) 2020  UserindoBot Team, <https://github.com/userbotindo/UserIndoBot.git>
+# Nisabot
+# Copyright (C) 2021 I Do Not Know, <https://github.com/agung267/NEWNISA.git>
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -17,10 +17,10 @@
 import telegram.ext as tg
 from telegram import Update
 
-from ubotindo import LOGGER
+from nisabot import LOGGER
 
 try:
-    from ubotindo import CUSTOM_CMD
+    from nisabot import CUSTOM_CMD
 except BaseException:
     CUSTOM_CMD = False
 
