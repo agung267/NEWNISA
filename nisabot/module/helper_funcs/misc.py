@@ -55,11 +55,11 @@ def split_message(msg: str) -> List[str]:
         return result
 
 
-def paginate_modules(
+def paginate_module(
     page_n: int, module_dict: Dict, prefix, chat=None
 ) -> List:
     if not chat:
-        modules = sorted(
+        module = sorted(
             [
                 EqInlineKeyboardButton(
                     x.__mod_name__,
@@ -71,7 +71,7 @@ def paginate_modules(
             ]
         )
     else:
-        modules = sorted(
+        module = sorted(
             [
                 EqInlineKeyboardButton(
                     x.__mod_name__,
@@ -84,15 +84,15 @@ def paginate_modules(
         )
 
     pairs = [
-        modules[i * 3 : (i + 1) * 3]
-        for i in range((len(modules) + 3 - 1) // 3)
+        module[i * 3 : (i + 1) * 3]
+        for i in range((len(module) + 3 - 1) // 3)
     ]
-    round_num = len(modules) / 3
-    calc = len(modules) - round(round_num)
+    round_num = len(module) / 3
+    calc = len(module) - round(round_num)
     if calc == 1:
-        pairs.append((modules[-1],))
+        pairs.append((module[-1],))
     elif calc == 2:
-        pairs.append((modules[-1],))
+        pairs.append((module[-1],))
 
     # can only have a certain amount of buttons side by side
     #    if len(pairs) > 7:
