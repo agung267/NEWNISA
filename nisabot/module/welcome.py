@@ -1,5 +1,5 @@
-# UserindoBot
-# Copyright (C) 2020  UserindoBot Team, <https://github.com/userbotindo/UserIndoBot.git>
+# Nisabot
+# Copyright (C) 2021 I Do Not Know, <https://github.com/agung267/NEWNISA.git>
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -38,8 +38,8 @@ from telegram.utils.helpers import (
     escape_markdown,
 )
 
-import ubotindo.modules.sql.welcome_sql as sql
-from ubotindo import (
+import nisabot.modules.sql.welcome_sql as sql
+from nisabot import (
     DEV_USERS,
     LOGGER,
     MESSAGE_DUMP,
@@ -47,25 +47,25 @@ from ubotindo import (
     dispatcher,
     spamwtc,
 )
-from ubotindo.modules.helper_funcs.alternate import send_message, typing_action
-from ubotindo.modules.helper_funcs.chat_status import (
+from nisabot.modules.helper_funcs.alternate import send_message, typing_action
+from nisabot.modules.helper_funcs.chat_status import (
     is_user_ban_protected,
     user_admin,
     can_restrict,
 )
-from ubotindo.modules.helper_funcs.misc import (
+from nisabot.modules.helper_funcs.misc import (
     build_keyboard,
     build_keyboard_parser,
     revert_buttons,
 )
-from ubotindo.modules.helper_funcs.msg_types import get_welcome_type
-from ubotindo.modules.helper_funcs.string_handling import (
+from nisabot.modules.helper_funcs.msg_types import get_welcome_type
+from nisabot.modules.helper_funcs.string_handling import (
     escape_invalid_curly_brackets,
     markdown_parser,
     markdown_to_html,
 )
-from ubotindo.modules.log_channel import loggable
-from ubotindo.modules.no_sql.gban_db import is_user_gbanned
+from nisabot.modules.log_channel import loggable
+from nisabot.modules.no_sql.gban_db import is_user_gbanned
 
 VALID_WELCOME_FORMATTERS = [
     "first",
