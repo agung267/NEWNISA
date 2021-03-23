@@ -29,8 +29,8 @@ from telegram import (
 from telegram.utils.helpers import mention_html
 
 from nisabot import dispatcher
-from nisabot.modules.disable import DisableAbleCommandHandler
-from nisabot.modules.helper_funcs.alternate import typing_action
+from nisabot.module.disable import DisableAbleCommandHandler
+from nisabot.module.helper_funcs.alternate import typing_action
 
 
 @typing_action
