@@ -53,12 +53,12 @@ from nisabot import (
     WHITELIST_CHATS,
 )
 
-# needed to dynamically load modules
+# needed to dynamically load module
 # NOTE: Module order is not guaranteed, specify that in the config file!
-from nisabot.module import ALL_MODULES
+from nisabot.module import ALL_MODULE
 from nisabot.module.helper_funcs.chat_status import is_user_admin
 from nisabot.module.helper_funcs.filters import CustomFilters
-from nisabot.module.helper_funcs.misc import paginate_modules
+from nisabot.module.helper_funcs.misc import paginate_module
 from nisabot.module.helper_funcs.alternate import typing_action
 
 
