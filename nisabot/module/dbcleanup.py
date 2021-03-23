@@ -1,5 +1,5 @@
-# UserindoBot
-# Copyright (C) 2020  UserindoBot Team, <https://github.com/userbotindo/UserIndoBot.git>
+# Nisabot
+# Copyright (C) 2021 I Do Not Know, <https://github.com/agung267/NEWNISA.git>
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -20,10 +20,10 @@ from telegram import Bot, InlineKeyboardButton, InlineKeyboardMarkup, Update
 from telegram.error import BadRequest, Unauthorized
 from telegram.ext import CallbackQueryHandler, CommandHandler
 
-from ubotindo.modules.no_sql import gban_db
-from ubotindo.modules.no_sql import users_db
-from ubotindo import DEV_USERS, dispatcher
-from ubotindo.modules.helper_funcs.filters import CustomFilters
+from nisabot.modules.no_sql import gban_db
+from nisabot.modules.no_sql import users_db
+from nisabot import DEV_USERS, dispatcher
+from nisabot.modules.helper_funcs.filters import CustomFilters
 
 
 def get_invalid_chats(bot: Bot, update: Update, remove: bool = False):
