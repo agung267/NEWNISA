@@ -38,10 +38,6 @@
         "description": "Spamwatch API",
         "value": "3f04Fx3lMDVReYqodKp1~M7bjR5SShLRoUX0DJG2~NJuxdhutSkgTS1D0skTC_9g"
       },
-      "GBAN_LOGS": {
-        "description": "chat_id for your global ban logs",
-        "value": "-1001226090919"
-      },
       "WEBHOOK": {
         "description": "Optional",
         "value": "true"
@@ -77,10 +73,6 @@
       "STRICT_GBAN": {
         "description": "",
         "value": "true"
-      },
-      "WORKERS": {
-        "description": "Number of subthreads to use. This is the recommended amount - see for yourself what works best!",
-        "value": "8"
       },
       "BAN_STICKER": {
         "description": "banhammer marie sticker",
