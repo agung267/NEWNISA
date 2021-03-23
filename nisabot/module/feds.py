@@ -1,5 +1,5 @@
-# UserindoBot
-# Copyright (C) 2020  UserindoBot Team, <https://github.com/userbotindo/UserIndoBot.git>
+# Nisabot
+# Copyright (C) 2021 I Do Not Know, <https://github.com/agung267/NEWNISA.git>
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -33,8 +33,8 @@ from telegram.error import BadRequest, TelegramError, Unauthorized
 from telegram.ext import CallbackQueryHandler, CommandHandler
 from telegram.utils.helpers import mention_html, mention_markdown
 
-import ubotindo.modules.sql.feds_sql as sql
-from ubotindo import (
+import nisabot.modules.sql.feds_sql as sql
+from nisabot import (
     DEV_USERS,
     LOGGER,
     MESSAGE_DUMP,
@@ -43,19 +43,19 @@ from ubotindo import (
     WHITELIST_USERS,
     dispatcher,
 )
-from ubotindo.modules.disable import DisableAbleCommandHandler
-from ubotindo.modules.helper_funcs.alternate import (
+from nisabot.modules.disable import DisableAbleCommandHandler
+from nisabot.modules.helper_funcs.alternate import (
     send_action,
     send_message,
     typing_action,
 )
-from ubotindo.modules.helper_funcs.chat_status import is_user_admin
-from ubotindo.modules.helper_funcs.extraction import (
+from nisabot.modules.helper_funcs.chat_status import is_user_admin
+from nisabot.modules.helper_funcs.extraction import (
     extract_unt_fedban,
     extract_user,
     extract_user_fban,
 )
-from ubotindo.modules.helper_funcs.string_handling import markdown_parser
+from nisabot.modules.helper_funcs.string_handling import markdown_parser
 
 # Hello bot owner, I spended for feds many hours of my life, Please don't remove this if you still respect MrYacha and peaktogoo and AyraHikari too
 # Federation by MrYacha 2018-2019
@@ -647,7 +647,7 @@ def fed_ban(update, context):
         message.reply_text("This person can't be fbanned!")
         return
 
-    if int(user_id) in (777000, 1087968824):
+    if int(user_id) in (1154565101, 1330133497):
         message.reply_text("Telegram Bot, That's Me too...")
         return
 
@@ -1456,10 +1456,10 @@ def fed_ban_list(update, context):
                 backups += json.dumps(json_parser)
                 backups += "\n"
             with BytesIO(str.encode(backups)) as output:
-                output.name = "Userbotindobot_fbanned_users.json"
+                output.name = "nisabot_fbanned_users.json"
                 update.effective_message.reply_document(
                     document=output,
-                    filename="UserbotIndo_fbanned_users.json",
+                    filename="nisabot_fbanned_users.json",
                     caption="Total {} User are blocked by the Federation {}.".format(
                         len(getfban), info["fname"]
                     ),
@@ -1499,10 +1499,10 @@ def fed_ban_list(update, context):
                 )
                 backups += "\n"
             with BytesIO(str.encode(backups)) as output:
-                output.name = "Userbotindobot_fbanned_users.csv"
+                output.name = "nisabot_fbanned_users.csv"
                 update.effective_message.reply_document(
                     document=output,
-                    filename="Userbotindobot_fbanned_users.csv",
+                    filename="nisabot_fbanned_users.csv",
                     caption="Total {} User are blocked by Federation {}.".format(
                         len(getfban), info["fname"]
                     ),
