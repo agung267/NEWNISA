@@ -38,7 +38,7 @@ from telegram.utils.helpers import (
     escape_markdown,
 )
 
-import nisabot.module.sql.welcome_sql as sql
+import nisabot.module.no_sql import welcome_db
 from nisabot import (
     DEV_USERS,
     LOGGER,
