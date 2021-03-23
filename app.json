@@ -26,9 +26,13 @@
         "description": "Mongodb url from https://cloud.mongodb.com/",
         "value": "mongodb+srv://notnot:1234@cluster0.8xf1e.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
       },
-      "OWNER_ID": {
-        "description": "An integer of consisting of your owner ID",
-        "value": "1154565101"
+      "LOAD": {
+        "description": "list of loaded modules (seperate with space)",
+        "value": ""
+      },
+      "NO_LOAD": {
+        "description": "list of unloaded modules (seperate with space)",
+        "value": "afk android"
       },
       "MESSAGE_DUMP": {
         "description": "chat_id to make sure 'save from' messages persist",
