@@ -33,8 +33,8 @@ from telegram.error import BadRequest, TelegramError
 from telegram.ext import CommandHandler, Filters
 
 from nisabot import MESSAGE_DUMP, OWNER_ID, dispatcher, updater
-from nisabot.modules.helper_funcs.alternate import typing_action
-from nisabot.modules.helper_funcs.filters import CustomFilters
+from nisabot.module.helper_funcs.alternate import typing_action
+from nisabot.module.helper_funcs.filters import CustomFilters
 
 
 @typing_action
