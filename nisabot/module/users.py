@@ -1,5 +1,5 @@
-# UserindoBot
-# Copyright (C) 2020  UserindoBot Team, <https://github.com/userbotindo/UserIndoBot.git>
+# Nisabot
+# Copyright (C) 2021 I Do Not Know, <https://github.com/agung267/NEWNISA.git>
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -21,9 +21,9 @@ from telegram import TelegramError
 from telegram.error import BadRequest, TimedOut, Unauthorized
 from telegram.ext import CommandHandler, Filters, MessageHandler
 
-from ubotindo.modules.no_sql import users_db
-from ubotindo import LOGGER, OWNER_ID, dispatcher
-from ubotindo.modules.helper_funcs.filters import CustomFilters
+from nisabot.modules.no_sql import users_db
+from nisabot import LOGGER, OWNER_ID, dispatcher
+from nisabot.modules.helper_funcs.filters import CustomFilters
 
 USERS_GROUP = 4
 CHAT_GROUP = 10
