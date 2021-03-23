@@ -16,7 +16,7 @@
 """Chat blacklist database."""
 
 
-from nisabot.modules.no_sql import get_collection
+from nisabot.module.no_sql import get_collection
 
 
 BL = get_collection("BLACKLIST")
