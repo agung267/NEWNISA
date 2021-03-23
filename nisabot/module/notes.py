@@ -34,7 +34,6 @@ from telegram.ext import (
 )
 from telegram.utils.helpers import mention_html
 
-import nisabot.module.sql.notes_sql as sql
 from nisabot import LOGGER, MESSAGE_DUMP, dispatcher
 from nisabot.module.connection import connected
 from nisabot.module.disable import DisableAbleCommandHandler
