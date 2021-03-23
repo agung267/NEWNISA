@@ -16,7 +16,7 @@
 """User database utils."""
 
 from nisabot import dispatcher
-from nisabot.modules.no_sql import get_collection
+from nisabot.module.no_sql import get_collection
 
 
 USERS_DB = get_collection("USERS")
