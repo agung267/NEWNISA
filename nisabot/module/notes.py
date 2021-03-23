@@ -1,5 +1,5 @@
-# UserindoBot
-# Copyright (C) 2020  UserindoBot Team, <https://github.com/userbotindo/UserIndoBot.git>
+# Nisabot
+# Copyright (C) 2021 I Do Not Know, <https://github.com/agung267/NEWNISA.git>
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -34,18 +34,18 @@ from telegram.ext import (
 )
 from telegram.utils.helpers import mention_html
 
-import ubotindo.modules.sql.notes_sql as sql
-from ubotindo import LOGGER, MESSAGE_DUMP, dispatcher
-from ubotindo.modules.connection import connected
-from ubotindo.modules.disable import DisableAbleCommandHandler
-from ubotindo.modules.helper_funcs.alternate import typing_action
-from ubotindo.modules.helper_funcs.chat_status import (
+import nisabot.modules.sql.notes_sql as sql
+from nisabot import LOGGER, MESSAGE_DUMP, dispatcher
+from nisabot.modules.connection import connected
+from nisabot.modules.disable import DisableAbleCommandHandler
+from nisabot.modules.helper_funcs.alternate import typing_action
+from nisabot.modules.helper_funcs.chat_status import (
     user_admin,
     user_admin_no_reply,
 )
-from ubotindo.modules.helper_funcs.misc import build_keyboard, revert_buttons
-from ubotindo.modules.helper_funcs.msg_types import get_note_type
-from ubotindo.modules.helper_funcs.string_handling import (
+from nisabot.modules.helper_funcs.misc import build_keyboard, revert_buttons
+from nisabot.modules.helper_funcs.msg_types import get_note_type
+from nisabot.modules.helper_funcs.string_handling import (
     escape_invalid_curly_brackets,
     markdown_to_html,
 )
@@ -396,7 +396,7 @@ def list_notes(update, context):
             )
         except ValueError:
             update.effective_message.reply_text(
-                "There was a problem in showing notes list, maybe due to some invalid character in note names. Ask in @userbotindo if you're unable to figure it out!"
+                "There was a problem in showing notes list, maybe due to some invalid character in note names. Ask in @temengobloksu if you're unable to figure it out!"
             )
 
 
