@@ -20,7 +20,7 @@ from typing import Union
 
 from sqlalchemy import Column, String, Boolean, UnicodeText, Integer
 
-from nisabot.modules.sql import SESSION, BASE
+from nisabot.module.sql import SESSION, BASE
 
 
 class ChatAccessConnectionSettings(BASE):
