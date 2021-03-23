@@ -1,5 +1,5 @@
-# UserindoBot
-# Copyright (C) 2020  UserindoBot Team, <https://github.com/userbotindo/UserIndoBot.git>
+# Nisabot
+# Copyright (C) 2021 I Do Not Know, <https://github.com/agung267/NEWNISA.git>
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -24,15 +24,15 @@ from telegram.error import BadRequest
 from telegram.ext import CommandHandler, Filters
 from telegram.utils.helpers import escape_markdown
 
-import ubotindo.modules.helper_funcs.fun_strings as fun
-from ubotindo import DEV_USERS, LOGGER, SUDO_USERS, SUPPORT_USERS, dispatcher
-from ubotindo.modules.disable import (
+import nisabot.modules.helper_funcs.fun_strings as fun
+from nisabot import DEV_USERS, LOGGER, SUDO_USERS, SUPPORT_USERS, dispatcher
+from nisabot.modules.disable import (
     DisableAbleCommandHandler,
     DisableAbleMessageHandler,
 )
-from ubotindo.modules.helper_funcs.alternate import typing_action
-from ubotindo.modules.helper_funcs.extraction import extract_user
-from ubotindo.modules.helper_funcs.filters import CustomFilters
+from nisabot.modules.helper_funcs.alternate import typing_action
+from nisabot.modules.helper_funcs.extraction import extract_user
+from nisabot.modules.helper_funcs.filters import CustomFilters
 
 
 @typing_action
@@ -489,7 +489,7 @@ Some dank memes for fun or whatever!
 Some other regex filters are:
 `me too` | `good morning` | `good night`.
 
-Userbotindobot will reply random strings accordingly when these words are used!
+nisabot will reply random strings accordingly when these words are used!
 All regex filters can be disabled incase u don't want... like: `/disable metoo`.
 
 """
@@ -498,7 +498,7 @@ __mod_name__ = "Memes"
 
 SHRUG_HANDLER = DisableAbleCommandHandler("shrug", shrug, run_async=True)
 DECIDE_HANDLER = DisableAbleMessageHandler(
-    Filters.regex(r"(?i)(ubotindo)"), decide, friendly="decide", run_async=True
+    Filters.regex(r"(?i)(nisabot)"), decide, friendly="decide", run_async=True
 )
 SNIPE_HANDLER = CommandHandler(
     "snipe",
