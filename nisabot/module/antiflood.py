@@ -1,5 +1,5 @@
-# UserindoBot
-# Copyright (C) 2020  UserindoBot Team, <https://github.com/userbotindo/UserIndoBot.git>
+# Nisabot
+# Copyright (C) 2021 I Do Not Know, <https://github.com/agung267/NEWNISA.git>
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -22,13 +22,13 @@ from telegram.error import BadRequest
 from telegram.ext import CommandHandler, Filters, MessageHandler
 from telegram.utils.helpers import mention_html
 
-from ubotindo import dispatcher
-from ubotindo.modules.connection import connected
-from ubotindo.modules.helper_funcs.alternate import send_message, typing_action
-from ubotindo.modules.helper_funcs.chat_status import is_user_admin, user_admin
-from ubotindo.modules.helper_funcs.string_handling import extract_time
-from ubotindo.modules.log_channel import loggable
-from ubotindo.modules.sql import antiflood_sql as sql
+from nisabot import dispatcher
+from nisabot.modules.connection import connected
+from nisabot.modules.helper_funcs.alternate import send_message, typing_action
+from nisabot.modules.helper_funcs.chat_status import is_user_admin, user_admin
+from nisabot.modules.helper_funcs.string_handling import extract_time
+from nisabot.modules.log_channel import loggable
+from nisabot.modules.sql import antiflood_sql as sql
 
 FLOOD_GROUP = 3
 
