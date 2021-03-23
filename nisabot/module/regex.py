@@ -21,7 +21,7 @@ import telegram
 from telegram.ext import Filters
 
 from nisabot import LOGGER, dispatcher
-from nisabot.modules.disable import DisableAbleMessageHandler
+from nisabot.module.disable import DisableAbleMessageHandler
 
 DELIMITERS = ("/", ":", "|", "_")
 
