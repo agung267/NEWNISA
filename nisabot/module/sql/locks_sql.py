@@ -19,7 +19,7 @@ import threading
 
 from sqlalchemy import Column, String, Boolean
 
-from nisabot.modules.sql import SESSION, BASE
+from nisabot.module.sql import SESSION, BASE
 
 
 class Permissions(BASE):
