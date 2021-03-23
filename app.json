@@ -14,19 +14,19 @@
         "description": "Setting this to ANYTHING will enable env variables",
         "value": "ANYTHING"
       },
-      "API_ID": {
-        "description": "Get thais value from https://my.telegram.org/apps",
-        "value": "1633495"  
-      },
-      "API_HASH": {
-        "description": "Get thais value from https://my.telegram.org/apps",
-        "value": "856d72eea076dab8b431be05dff7de50"
-      },
       "TOKEN": {
-        "description": "Your bot token, as a string.",
-        "value": "1704565334:AAHAqOWrIpl3q_hYhT7L5zSyQ2A60J_J8M4"
+        "description": "Get this value from BotFather",
+        "value": "1704565334:AAHAqOWrIpl3q_hYhT7L5zSyQ2A60J_J8M4"  
       },
-      "DB_URI": {
+      "OWNER_USERNAME": {
+        "description": "Your telegram username",
+        "value": "fake762"
+      },
+      "DATABASE_URL": {
+        "description": "Your database",
+        "value": "sqldbtype://username:pw@hostname:port/db_name"
+      },
+      "MONGO_DB_URI": {
         "description": "Mongodb url from https://cloud.mongodb.com/",
         "value": "mongodb+srv://notnot:1234@cluster0.8xf1e.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
       },
