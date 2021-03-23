@@ -18,7 +18,7 @@ import threading
 
 from sqlalchemy import String, Column, Integer, UnicodeText
 
-from emilia.modules.sql import SESSION, BASE
+from nisabot.module.sql import SESSION, BASE
 
 DEF_COUNT = 0
 DEF_LIMIT = 0
