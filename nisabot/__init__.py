@@ -1,6 +1,6 @@
 """Initial app framework"""
 # Nisabot
-# Copyright (C) 2021  Nisabot Team, <https://github.com/agung267/NEWNISA.git>
+# Copyright (C) 2021 I Do Not Know, <https://github.com/agung267/NEWNISA.git>
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
