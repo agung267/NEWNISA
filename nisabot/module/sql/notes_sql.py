@@ -28,8 +28,8 @@ from sqlalchemy import (
     distinct,
 )
 
-from nisabot.modules.helper_funcs.msg_types import Types
-from nisabot.modules.sql import SESSION, BASE
+from nisabot.module.helper_funcs.msg_types import Types
+from nisabot.module.sql import SESSION, BASE
 
 
 class Notes(BASE):
