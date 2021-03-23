@@ -124,7 +124,7 @@ WHITELIST_USERS = list(WHITELIST_USERS)
 
 # Load at end to ensure all prev variables have been set
 # pylint: disable=C0413
-from nisabot.modules.helper_funcs.handlers import (
+from nisabot.module.helper_funcs.handlers import (
     CustomCommandHandler,
 )
 
