@@ -24,15 +24,15 @@ from telegram.error import BadRequest
 from telegram.ext import CommandHandler, Filters
 from telegram.utils.helpers import escape_markdown
 
-import nisabot.modules.helper_funcs.fun_strings as fun
+import nisabot.module.helper_funcs.fun_strings as fun
 from nisabot import DEV_USERS, LOGGER, SUDO_USERS, SUPPORT_USERS, dispatcher
-from nisabot.modules.disable import (
+from nisabot.module.disable import (
     DisableAbleCommandHandler,
     DisableAbleMessageHandler,
 )
-from nisabot.modules.helper_funcs.alternate import typing_action
-from nisabot.modules.helper_funcs.extraction import extract_user
-from nisabot.modules.helper_funcs.filters import CustomFilters
+from nisabot.module.helper_funcs.alternate import typing_action
+from nisabot.module.helper_funcs.extraction import extract_user
+from nisabot.module.helper_funcs.filters import CustomFilters
 
 
 @typing_action
