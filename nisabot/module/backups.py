@@ -23,22 +23,22 @@ from telegram import ParseMode
 from telegram.error import BadRequest
 from telegram.ext import CommandHandler
 
-# from nisabot.modules.sql import warns_sql as warnssql
-from nisabot.modules.no_sql import blacklist_db
+# from nisabot.module.sql import warns_sql as warnssql
+from nisabot.module.no_sql import blacklist_db
 
-# from nisabot.modules.sql import cust_filters_sql as filtersql
-# import nisabot.modules.sql.welcome_sql as welcsql
-import nisabot.modules.sql.locks_sql as locksql
-import nisabot.modules.sql.notes_sql as sql
+# from nisabot.module.sql import cust_filters_sql as filtersql
+# import nisabot.module.sql.welcome_sql as welcsql
+import nisabot.module.sql.locks_sql as locksql
+import nisabot.module.sql.notes_sql as sql
 
-# from nisabot.modules.rules import get_rules
-from nisabot.modules.rules import chat_rules
+# from nisabot.module.rules import get_rules
+from nisabot.module.rules import chat_rules
 from nisabot import DEV_USERS, LOGGER, MESSAGE_DUMP, OWNER_ID, dispatcher
 from nisabot.__main__ import DATA_IMPORT
-from nisabot.modules.connection import connected
-from nisabot.modules.helper_funcs.alternate import typing_action
-from nisabot.modules.helper_funcs.chat_status import user_admin
-from nisabot.modules.no_sql import disable_db
+from nisabot.module.connection import connected
+from nisabot.module.helper_funcs.alternate import typing_action
+from nisabot.module.helper_funcs.chat_status import user_admin
+from nisabot.module.no_sql import disable_db
 
 
 @user_admin
