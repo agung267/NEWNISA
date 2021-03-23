@@ -21,14 +21,14 @@ from telegram import MessageEntity
 from telegram.error import BadRequest
 from telegram.ext import Filters, MessageHandler
 
-import nisabot.modules.helper_funcs.fun_strings as fun
+import nisabot.module.helper_funcs.fun_strings as fun
 from nisabot import dispatcher
-from nisabot.modules.disable import (
+from nisabot.module.disable import (
     DisableAbleCommandHandler,
     DisableAbleMessageHandler,
 )
-from nisabot.modules.no_sql import afk_db
-from nisabot.modules.users import get_user_id
+from nisabot.module.no_sql import afk_db
+from nisabot.module.users import get_user_id
 
 AFK_GROUP = 7
 AFK_REPLY_GROUP = 8
