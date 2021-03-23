@@ -22,19 +22,19 @@ from telegram.error import BadRequest
 from telegram.ext import CommandHandler, Filters, MessageHandler
 from telegram.utils.helpers import mention_html
 
-import nisabot.modules.sql.locks_sql as sql
+import nisabot.module.sql.locks_sql as sql
 from nisabot import DEV_USERS, LOGGER, SUDO_USERS, dispatcher
-from nisabot.modules.connection import connected
-from nisabot.modules.disable import DisableAbleCommandHandler
-from nisabot.modules.helper_funcs.alternate import send_message, typing_action
-from nisabot.modules.helper_funcs.chat_status import (
+from nisabot.module.connection import connected
+from nisabot.module.disable import DisableAbleCommandHandler
+from nisabot.module.helper_funcs.alternate import send_message, typing_action
+from nisabot.module.helper_funcs.chat_status import (
     can_delete,
     is_bot_admin,
     is_user_admin,
     user_admin,
     user_not_admin,
 )
-from nisabot.modules.log_channel import loggable
+from nisabot.module.log_channel import loggable
 
 ad = AlphabetDetector()
 
