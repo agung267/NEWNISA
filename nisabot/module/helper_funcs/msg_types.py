@@ -18,7 +18,7 @@ from enum import IntEnum, unique
 
 from telegram import Message
 
-from nisabot.modules.helper_funcs.string_handling import (
+from nisabot.module.helper_funcs.string_handling import (
     button_markdown_parser,
 )
 
