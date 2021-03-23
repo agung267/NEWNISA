@@ -3,8 +3,8 @@ import datetime
 from telegram.ext import CommandHandler
 from telegram import Update
 from nisabot import dispatcher
-from nisabot.modules.helper_funcs.filters import CustomFilters
-from nisabot.modules.helper_funcs.alternate import typing_action
+from nisabot.module.helper_funcs.filters import CustomFilters
+from nisabot.module.helper_funcs.alternate import typing_action
 
 
 @typing_action
