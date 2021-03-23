@@ -33,7 +33,7 @@ from telegram.error import BadRequest, TelegramError, Unauthorized
 from telegram.ext import CallbackQueryHandler, CommandHandler
 from telegram.utils.helpers import mention_html, mention_markdown
 
-import nisabot.modules.sql.feds_sql as sql
+import nisabot.module.sql.feds_sql as sql
 from nisabot import (
     DEV_USERS,
     LOGGER,
@@ -43,19 +43,19 @@ from nisabot import (
     WHITELIST_USERS,
     dispatcher,
 )
-from nisabot.modules.disable import DisableAbleCommandHandler
-from nisabot.modules.helper_funcs.alternate import (
+from nisabot.module.disable import DisableAbleCommandHandler
+from nisabot.module.helper_funcs.alternate import (
     send_action,
     send_message,
     typing_action,
 )
-from nisabot.modules.helper_funcs.chat_status import is_user_admin
-from nisabot.modules.helper_funcs.extraction import (
+from nisabot.module.helper_funcs.chat_status import is_user_admin
+from nisabot.module.helper_funcs.extraction import (
     extract_unt_fedban,
     extract_user,
     extract_user_fban,
 )
-from nisabot.modules.helper_funcs.string_handling import markdown_parser
+from nisabot.module.helper_funcs.string_handling import markdown_parser
 
 # Hello bot owner, I spended for feds many hours of my life, Please don't remove this if you still respect MrYacha and peaktogoo and AyraHikari too
 # Federation by MrYacha 2018-2019
