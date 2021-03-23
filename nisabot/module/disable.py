@@ -1,5 +1,5 @@
-# UserindoBot
-# Copyright (C) 2020  UserindoBot Team, <https://github.com/userbotindo/UserIndoBot.git>
+# Nisabot
+# Copyright (C) 2021 I Do Not Know, <https://github.com/agung267/NEWNISA.git>
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -21,21 +21,21 @@ from telegram import Chat, ParseMode, Update
 from telegram.ext import CommandHandler, MessageHandler
 from telegram.utils.helpers import escape_markdown
 
-from ubotindo import dispatcher
-from ubotindo.modules.connection import connected
-from ubotindo.modules.helper_funcs.alternate import send_message, typing_action
-from ubotindo.modules.helper_funcs.handlers import CMD_STARTERS
-from ubotindo.modules.helper_funcs.misc import is_module_loaded
+from nisabot import dispatcher
+from nisabot.modules.connection import connected
+from nisabot.modules.helper_funcs.alternate import send_message, typing_action
+from nisabot.modules.helper_funcs.handlers import CMD_STARTERS
+from nisabot.modules.helper_funcs.misc import is_module_loaded
 
 FILENAME = __name__.rsplit(".", 1)[-1]
 
 # If module is due to be loaded, then setup all the magical handlers
 if is_module_loaded(FILENAME):
-    from ubotindo.modules.helper_funcs.chat_status import (
+    from nisabot.modules.helper_funcs.chat_status import (
         is_user_admin,
         user_admin,
     )
-    from ubotindo.modules.no_sql import disable_db
+    from nisabot.modules.no_sql import disable_db
 
     DISABLE_CMDS = []
     DISABLE_OTHER = []
