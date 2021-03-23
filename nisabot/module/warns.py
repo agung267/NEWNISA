@@ -56,7 +56,7 @@ from nisabot.module.helper_funcs.filters import CustomFilters
 from nisabot.module.helper_funcs.misc import split_message
 from nisabot.module.helper_funcs.string_handling import split_quotes
 from nisabot.module.log_channel import loggable
-from nisabot.module.sql import warns_sql as sql
+from nisabot.module.no_sql import warns_db
 
 WARN_HANDLER_GROUP = 9
 CURRENT_WARNING_FILTER_STRING = (
