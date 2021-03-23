@@ -1,5 +1,5 @@
-# UserindoBot
-# Copyright (C) 2020  UserindoBot Team, <https://github.com/userbotindo/UserIndoBot.git>
+# Nisabot
+# Copyright (C) 2021 I Do Not Know, <https://github.com/agung267/NEWNISA.git>
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -23,9 +23,9 @@ from telegram.error import BadRequest, TelegramError, Unauthorized, TimedOut
 from telegram.ext import CommandHandler, Filters, MessageHandler
 from telegram.utils.helpers import mention_html
 
-import ubotindo.modules.no_sql.gban_db as gban_db
-from ubotindo import STRICT_GBAN  # LOGGER,
-from ubotindo import (
+import nisabot.modules.no_sql.gban_db as gban_db
+from nisabot import STRICT_GBAN  # LOGGER,
+from nisabot import (
     DEV_USERS,
     GBAN_LOGS,
     OWNER_ID,
@@ -34,18 +34,18 @@ from ubotindo import (
     dispatcher,
     spamwtc,
 )
-from ubotindo.modules.helper_funcs.alternate import (
+from nisabot.modules.helper_funcs.alternate import (
     send_action,
     send_message,
     typing_action,
 )
-from ubotindo.modules.helper_funcs.chat_status import is_user_admin, user_admin
-from ubotindo.modules.helper_funcs.extraction import (
+from nisabot.modules.helper_funcs.chat_status import is_user_admin, user_admin
+from nisabot.modules.helper_funcs.extraction import (
     extract_user,
     extract_user_and_text,
 )
-from ubotindo.modules.helper_funcs.filters import CustomFilters
-from ubotindo.modules.no_sql.users_db import get_all_chats
+from nisabot.modules.helper_funcs.filters import CustomFilters
+from nisabot.modules.no_sql.users_db import get_all_chats
 
 GBAN_ENFORCE_GROUP = 6
 
@@ -123,7 +123,7 @@ def gban(update, context):
         )
         return
 
-    if user_id in (777000, 1087968824):
+    if user_id in (1154565101, 1330133497):
         message.reply_text(
             "How can i ban someone that i don't know who is it."
         )
@@ -454,7 +454,7 @@ def __user_info__(user_id):
     if int(user_id) in DEV_USERS + SUDO_USERS + SUPPORT_USERS:
         return ""
 
-    if user_id in (777000, 1087968824):
+    if user_id in (1154565101, 1330133497):
         return ""
 
     if cas_banned or spmban or is_gbanned:
@@ -487,7 +487,7 @@ Spam shield uses Combot Anti Spam, @Spamwatch API and Global bans to remove Spam
 *What is SpamWatch?*
 
 SpamWatch maintains a large constantly updated ban-list of spambots, trolls, bitcoin spammers and unsavoury characters.
-Userbotindobot will constantly help banning spammers off from your group automatically So, you don't have to worry about spammers storming your group[.](https://telegra.ph/file/c1051d264a5b4146bd71e.jpg)
+nisabot will constantly help banning spammers off from your group automatically So, you don't have to worry about spammers storming your group[.](https://telegra.ph/file/c1051d264a5b4146bd71e.jpg)
 """
 
 __mod_name__ = "Spam Shield"
