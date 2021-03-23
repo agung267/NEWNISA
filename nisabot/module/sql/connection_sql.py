@@ -1,5 +1,5 @@
-# UserindoBot
-# Copyright (C) 2020  UserindoBot Team, <https://github.com/userbotindo/UserIndoBot.git>
+# Nisabot
+# Copyright (C) 2021 I Do Not Know, <https://github.com/agung267/NEWNISA.git>
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -20,8 +20,8 @@ from typing import Union
 
 from sqlalchemy import Column, String, Boolean, UnicodeText, Integer, func, distinct
 
-from emilia.modules.helper_funcs.msg_types import Types
-from emilia.modules.sql import SESSION, BASE
+from nisabot.modules.helper_funcs.msg_types import Types
+from nisabot.modules.sql import SESSION, BASE
 
 
 class ChatAccessConnectionSettings(BASE):
