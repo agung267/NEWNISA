@@ -1,5 +1,5 @@
-# UserindoBot
-# Copyright (C) 2020  UserindoBot Team, <https://github.com/userbotindo/UserIndoBot.git>
+# Nisabot
+# Copyright (C) 2021 I Do Not Know, <https://github.com/agung267/NEWNISA.git>
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -28,8 +28,8 @@ from sqlalchemy import (
     distinct,
 )
 
-from ubotindo.modules.helper_funcs.msg_types import Types
-from ubotindo.modules.sql import SESSION, BASE
+from nisabot.module.helper_funcs.msg_types import Types
+from nisabot.module.sql import SESSION, BASE
 
 
 class Notes(BASE):
