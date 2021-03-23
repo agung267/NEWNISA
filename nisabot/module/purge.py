@@ -7,10 +7,10 @@ from telegram.ext import Filters
 from telegram.utils.helpers import mention_html
 
 from nisabot import dispatcher, LOGGER
-from nisabot.modules.disable import DisableAbleCommandHandler
-from nisabot.modules.helper_funcs.chat_status import user_admin, can_delete
-from nisabot.modules.helper_funcs.admin_rights import user_can_delete
-from nisabot.modules.log_channel import loggable
+from nisabot.module.disable import DisableAbleCommandHandler
+from nisabot.module.helper_funcs.chat_status import user_admin, can_delete
+from nisabot.module.helper_funcs.admin_rights import user_can_delete
+from nisabot.module.log_channel import loggable
 
 
 @user_admin
