@@ -23,7 +23,7 @@ def __list_all_module():
     import glob
     from os.path import basename, dirname, isfile
 
-    # This generates a list of modules in this folder for the * in __main__ to
+    # This generates a list of module in this folder for the * in __main__ to
     # work.
     mod_paths = glob.glob(dirname(__file__) + "/*.py")
     all_module = [
@@ -43,7 +43,7 @@ def __list_all_module():
                 sys.exit(1)
 
         else:
-            to_load = all_modules
+            to_load = all_module
 
         if NO_LOAD:
             LOGGER.info("Not loading: {}".format(NO_LOAD))
