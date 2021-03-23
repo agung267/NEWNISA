@@ -43,7 +43,7 @@ from nisabot.module.helper_funcs.string_handling import (
     markdown_to_html,
     split_quotes,
 )
-from nisabot.module.sql import cust_filters_db
+from nisabot.module.sql import cust_filters_sql as sql
 
 HANDLER_GROUP = 15
 
