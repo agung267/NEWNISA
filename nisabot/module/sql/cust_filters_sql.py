@@ -10,8 +10,8 @@ from sqlalchemy import (
     func,
 )
 
-from ubotindo.modules.helper_funcs.msg_types import Types
-from ubotindo.modules.sql import BASE, SESSION
+from nisabot.module.helper_funcs.msg_types import Types
+from nisabot.module.sql import BASE, SESSION
 
 
 class CustomFilters(BASE):
