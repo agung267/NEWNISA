@@ -9,7 +9,6 @@ emoji
 feedparser
 future
 git+https://github.com/userbotindo/python-markdown2.git
-https://github.com/agung267/tmp.git
 google_trans_new
 gtts
 lxml
