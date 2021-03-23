@@ -1,5 +1,5 @@
-# UserindoBot
-# Copyright (C) 2020  UserindoBot Team, <https://github.com/userbotindo/UserIndoBot.git>
+# Nisabot
+# Copyright (C) 2021 I Do Not Know, <https://github.com/agung267/NEWNISA.git>
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -23,27 +23,27 @@ from telegram.error import BadRequest
 from telegram.ext import CommandHandler, Filters
 from telegram.utils.helpers import mention_html
 
-from ubotindo import dispatcher
-from ubotindo.modules.connection import connected
-from ubotindo.modules.disable import DisableAbleCommandHandler
-from ubotindo.modules.helper_funcs.admin_rights import (
+from nisabot import dispatcher
+from nisabot.modules.connection import connected
+from nisabot.modules.disable import DisableAbleCommandHandler
+from nisabot.modules.helper_funcs.admin_rights import (
     user_can_changeinfo,
     user_can_pin,
     user_can_promote,
 )
-from ubotindo.modules.helper_funcs.alternate import typing_action
-from ubotindo.modules.helper_funcs.chat_status import (
+from nisabot.modules.helper_funcs.alternate import typing_action
+from nisabot.modules.helper_funcs.chat_status import (
     bot_admin,
     can_pin,
     can_promote,
     user_admin,
     ADMIN_CACHE,
 )
-from ubotindo.modules.helper_funcs.extraction import (
+from nisabot.modules.helper_funcs.extraction import (
     extract_user,
     extract_user_and_text,
 )
-from ubotindo.modules.log_channel import loggable
+from nisabot.modules.log_channel import loggable
 
 
 @bot_admin
