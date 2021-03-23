@@ -1,18 +1,4 @@
-import threading
-
-from sqlalchemy import (
-    Column,
-    String,
-    UnicodeText,
-    Boolean,
-    Integer,
-    distinct,
-    func,
-)
-
-from ubotindo.modules.helper_funcs.msg_types import Types
-from ubotindo.modules.sql import BASE, SESSION
-
+from nisabot.module.no_sql import get_collection
 
 class CustomFilters(BASE):
     __tablename__ = "cust_filters"
