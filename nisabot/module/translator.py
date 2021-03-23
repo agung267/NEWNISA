@@ -24,8 +24,8 @@ from gtts import gTTS
 from telegram import ChatAction
 
 from nisabot import dispatcher
-from nisabot.modules.disable import DisableAbleCommandHandler
-from nisabot.modules.helper_funcs.alternate import send_action, typing_action
+from nisabot.module.disable import DisableAbleCommandHandler
+from nisabot.module.helper_funcs.alternate import send_action, typing_action
 
 
 @typing_action
