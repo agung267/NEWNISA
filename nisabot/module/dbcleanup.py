@@ -20,10 +20,10 @@ from telegram import Bot, InlineKeyboardButton, InlineKeyboardMarkup, Update
 from telegram.error import BadRequest, Unauthorized
 from telegram.ext import CallbackQueryHandler, CommandHandler
 
-from nisabot.modules.no_sql import gban_db
-from nisabot.modules.no_sql import users_db
+from nisabot.module.no_sql import gban_db
+from nisabot.module.no_sql import users_db
 from nisabot import DEV_USERS, dispatcher
-from nisabot.modules.helper_funcs.filters import CustomFilters
+from nisabot.module.helper_funcs.filters import CustomFilters
 
 
 def get_invalid_chats(bot: Bot, update: Update, remove: bool = False):
